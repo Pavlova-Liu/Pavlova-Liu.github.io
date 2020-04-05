@@ -1,79 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>从安装Hexo开始搭建个人博客</title>
-    <url>/2020/03/19/%E4%BB%8E%E5%AE%89%E8%A3%85Hexo%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_002.jpg" alt=""></p>
-<p>从安装Hexo开始，一步一步搭建个人博客。</p>
+    <title>以NexT主题为例讲讲如何更换Hexo博客主题</title>
+    <url>/2020/03/21/%E4%BB%A5NexT%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B%E8%AE%B2%E8%AE%B2%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_004.jpg" alt=""></p>
+<p>搭建好了个人博客之后，很多人觉得官方的<code>landscape</code>主题不好看，那本篇文章以<code>NexT</code>主题为例来讲下如何更换主题和配置主题。</p>
 <a id="more"></a>
 
 <hr>
-<h1 id="1-什么是Hexo"><a href="#1-什么是Hexo" class="headerlink" title="1.什么是Hexo"></a>1.什么是Hexo</h1><p>上篇<a href="http://pavlova-liu.github.io/2020/03/19/%E4%BD%A0%E5%8F%AF%E8%83%BD%E6%B2%A1%E4%BB%94%E7%BB%86%E4%BA%86%E8%A7%A3%E8%BF%87%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">你可能没仔细了解过什么是静态博客</a>，简单介绍了下静态、动态博客。</p>
-<p>现在我们先看看Hexo官方的介绍。</p>
-<blockquote>
-<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-</blockquote>
-<p>Hexo官网已经有了博客搭建的详细教程，可直接移步查看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">文档</a></p>
-<p>至于写这一篇博客搭建的记录，主要是按着官方教程做的过程中，出现了太多意料不到的问题，对于新手小白实在不友善。因此我觉得有记录的必要。</p>
-<hr>
-<h1 id="2-安装前提"><a href="#2-安装前提" class="headerlink" title="2.安装前提"></a>2.安装前提</h1><p>只需安装下列应用程序：</p>
-<ul>
-<li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a> (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)</li>
-<li><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
-</ul>
-<p>安装完成后，才可开始安装Hexo。</p>
-<h2 id="2-1-安装Node-js"><a href="#2-1-安装Node-js" class="headerlink" title="2.1.安装Node.js"></a>2.1.安装Node.js</h2><p>根据安装教程一般就直接下一步，确保要勾选<strong>Add to PATH</strong>选项（默认已勾选）</p>
-<p>安装完后，显示出已安装Node.js和npm。</p>
-<blockquote>
-<p><strong>NPM</strong>（原简称<strong>节点包管理器</strong>）是一个包管理器的JavaScript的编程语言。它是JavaScript运行时环境Node.js的默认包管理器</p>
-</blockquote>
-<p>在终端上查看，<code>-v</code>即version，显示版本号。以下是我的配置，这样便是安装成功</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">❯ node -v</span><br><span class="line">v12.16.1</span><br><span class="line"></span><br><span class="line">❯ npm -v</span><br><span class="line">6.13.4</span><br></pre></td></tr></table></figure>
+<h1 id="1-下载最新版本"><a href="#1-下载最新版本" class="headerlink" title="1.下载最新版本"></a>1.下载最新版本</h1><p>这是官方<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题页面</a>，浏览并选中一款我们喜欢的主题。</p>
+<p>我选中了这款优雅的主题<code>NexT</code>。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/162139.png" alt=""></p>
+<p>我们直接将其克隆到博客themes目录下即可。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/162459.png" alt=""></p>
+<p>以下是命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes\next</span><br></pre></td></tr></table></figure>
+
+<p>此外由于NexT主题每个月都会发布新版本，所以我们还得加一个命令更新</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd themes&#x2F;next</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="2-2-安装Git"><a href="#2-2-安装Git" class="headerlink" title="2.2 安装Git"></a>2.2 安装Git</h2><p>初次安装完成后，需要用 <code>git config</code> 配置 Git。 首先要做的事情就是设置你的名字和邮件地址：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;John Doe&quot;</span><br><span class="line">git config --global user.email johndoe@example.com</span><br></pre></td></tr></table></figure>
+<h1 id="2-设置"><a href="#2-设置" class="headerlink" title="2.设置"></a>2.设置</h1><p>安装完后就可以在<strong>根目录下的配置文件_config,yml</strong>进行设置，</p>
+<p>找到<code>theme</code>关键字，把<code>landscape</code>换位<code>next</code>即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
 
-<p>对Git有疑惑的可看官方<a href="https://git-scm.com/docs" target="_blank" rel="noopener">文档</a>和<a href="https://www.runoob.com/git/git-tutorial.html" target="_blank" rel="noopener">菜鸟教程</a></p>
+<p>若选中了别的主题，可以看主题的README文件，方法步骤都一样，大差不差。</p>
 <hr>
-<h1 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3.安装Hexo"></a>3.安装Hexo</h1><p>当准备程序安装完成后，开始安装Hexo。</p>
-<p>很简单一条命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>安装完后通过<code>hexo -v</code>，如果显示出版本号即安装成功。</p>
-<hr>
-<h1 id="4-建站"><a href="#4-建站" class="headerlink" title="4.建站"></a>4.建站</h1><p>安装Hexo后，将在指定文件夹中新建所需文件。这里文件夹可自己命名。我命名为<code>blog</code>，以后若是出了什么错误大不了把<code>blog</code>删掉重来。</p>
-<p>还是几条命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>新建完，去blog查看目录。<code>_conofig.yml</code>是Hexo的配置文件。<code>_posts</code>是存放本地发布的文章。<code>themes</code>存放主题文件。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<h1 id="3-启用"><a href="#3-启用" class="headerlink" title="3.启用"></a>3.启用</h1><p>切换主题前先清除Hexo缓存，再来生成并部署到远端。</p>
+<p>三部曲走起：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h1 id="5-生成静态页面"><a href="#5-生成静态页面" class="headerlink" title="5.生成静态页面"></a>5.生成静态页面</h1><p>现在可以开启Hexo博客的预览了。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p><code>g</code>是<code>generate</code>，<code>s</code>即<code>server</code>，此时会提供一个本地预览端口<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
-<p>点击进入可以看到Hexo的静态网页已生成，如此便是安装成功了。</p>
-<hr>
-<h1 id="6-问题解决"><a href="#6-问题解决" class="headerlink" title="6.问题解决"></a>6.问题解决</h1><p>就这几个步骤，我卡了半天。因为在国内原因npm下载太慢了，不成功的同学可以把npm换成淘宝的镜像cnpm来下载。以后即可都用cnpm代替npm。</p>
-<p>安装cnpm </p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org</span></span><br></pre></td></tr></table></figure>
-
-<p>确认cnpm安装成功</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
-
-<p>利用cnpm来安装Hexo</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<p>确认Hexo安装成功</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+<h1 id="4-最后"><a href="#4-最后" class="headerlink" title="4.最后"></a>4.最后</h1><p>主题的配置大家可以自己慢慢去玩，添加超链接、添加打赏、动画啊，还有就是NexT常常更新，不同版本一些配置可能不一样，大家可以根据文档教程<a href="https://theme-next.org/" target="_blank" rel="noopener">NexT主题</a>来慢慢折腾。</p>
+]]></content>
+      <categories>
+        <category>实战记录</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>个人偏爱的NexT主题美化</title>
+    <url>/2020/03/24/%E4%B8%AA%E4%BA%BA%E5%81%8F%E7%88%B1%E7%9A%84NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_003.jpg" alt=""></p>
+<p>基于人类对于美好事物的不断追求，催生了这篇有关美化的内容。</p>
+<p>明知是个坑，还是得要跳啊！在此献上我所爱的NexT主题美化内容。</p>
+<a id="more"></a>
 
 <hr>
-<h1 id="7-最后"><a href="#7-最后" class="headerlink" title="7.最后"></a>7.最后</h1><p>安装好Hexo后，我们要对网站进行配置，安装主题和部署到远端服务器。</p>
-<p>不慌，慢慢来。</p>
+<h1 id="鼠标点击特效"><a href="#鼠标点击特效" class="headerlink" title="鼠标点击特效"></a>鼠标点击特效</h1><p>对美观和运行速度的两方考虑，我更喜欢心形鼠标点击特效。</p>
+<h2 id="创建js文件"><a href="#创建js文件" class="headerlink" title="创建js文件"></a>创建js文件</h2><p>在<code>./themes/next/source/js</code>中新建<code>clicklove.js</code>，添加代码</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span>(<span class="params">e,t,a</span>)</span>&#123;<span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params"></span>)</span>&#123;c(<span class="string">".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"</span>),o(),r()&#125;<span class="function"><span class="keyword">function</span> <span class="title">r</span>(<span class="params"></span>)</span>&#123;<span class="keyword">for</span>(<span class="keyword">var</span> e=<span class="number">0</span>;e&lt;d.length;e++)d[e].alpha&lt;=<span class="number">0</span>?(t.body.removeChild(d[e].el),d.splice(e,<span class="number">1</span>)):(d[e].y--,d[e].scale+=<span class="number">.004</span>,d[e].alpha-=<span class="number">.013</span>,d[e].el.style.cssText=<span class="string">"left:"</span>+d[e].x+<span class="string">"px;top:"</span>+d[e].y+<span class="string">"px;opacity:"</span>+d[e].alpha+<span class="string">";transform:scale("</span>+d[e].scale+<span class="string">","</span>+d[e].scale+<span class="string">") rotate(45deg);background:"</span>+d[e].color+<span class="string">";z-index:99999"</span>);requestAnimationFrame(r)&#125;<span class="function"><span class="keyword">function</span> <span class="title">o</span>(<span class="params"></span>)</span>&#123;<span class="keyword">var</span> t=<span class="string">"function"</span>==<span class="keyword">typeof</span> e.onclick&amp;&amp;e.onclick;e.onclick=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;t&amp;&amp;t(),i(e)&#125;&#125;<span class="function"><span class="keyword">function</span> <span class="title">i</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">var</span> a=t.createElement(<span class="string">"div"</span>);a.className=<span class="string">"heart"</span>,d.push(&#123;<span class="attr">el</span>:a,<span class="attr">x</span>:e.clientX<span class="number">-5</span>,<span class="attr">y</span>:e.clientY<span class="number">-5</span>,<span class="attr">scale</span>:<span class="number">1</span>,<span class="attr">alpha</span>:<span class="number">1</span>,<span class="attr">color</span>:s()&#125;),t.body.appendChild(a)&#125;<span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">var</span> a=t.createElement(<span class="string">"style"</span>);a.type=<span class="string">"text/css"</span>;<span class="keyword">try</span>&#123;a.appendChild(t.createTextNode(e))&#125;<span class="keyword">catch</span>(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].appendChild(a)&#125;<span class="function"><span class="keyword">function</span> <span class="title">s</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span><span class="string">"rgb("</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">","</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">","</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">")"</span>&#125;<span class="keyword">var</span> d=[];e.requestAnimationFrame=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;setTimeout(e,<span class="number">1e3</span>/<span class="number">60</span>)&#125;&#125;(),n()&#125;(<span class="built_in">window</span>,<span class="built_in">document</span>);</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h1 id="8-参考"><a href="#8-参考" class="headerlink" title="8.参考"></a>8.参考</h1><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">文档</a></p>
+<h2 id="修改layout文件"><a href="#修改layout文件" class="headerlink" title="修改layout文件"></a>修改layout文件</h2><p>打开<code>./themes/next/layout/_layout.swig</code>并在末尾添加以下代码</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 页面点击心形 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/clicklove.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="网站运行时间"><a href="#网站运行时间" class="headerlink" title="网站运行时间"></a>网站运行时间</h1><p>打开<code>.\themes\next\layout\_partials\footer.swig</code>并添加下列代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;timeDate&quot;&gt;载入天数...&lt;&#x2F;span&gt;&lt;span id&#x3D;&quot;times&quot;&gt;载入时分秒...&lt;&#x2F;span&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var now &#x3D; new Date();</span><br><span class="line">    function createtime() &#123;</span><br><span class="line">        var grt&#x3D; new Date(&quot;03&#x2F;31&#x2F;2019 00:00:00&quot;);</span><br><span class="line">        now.setTime(now.getTime()+250);</span><br><span class="line">        days &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 &#x2F; 24; dnum &#x3D; Math.floor(days);</span><br><span class="line">        hours &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 - (24 * dnum); hnum &#x3D; Math.floor(hours);</span><br><span class="line">        if(String(hnum).length &#x3D;&#x3D;1 )&#123;hnum &#x3D; &quot;0&quot; + hnum;&#125; minutes &#x3D; (now - grt ) &#x2F; 1000 &#x2F;60 - (24 * 60 * dnum) - (60 * hnum);</span><br><span class="line">        mnum &#x3D; Math.floor(minutes); if(String(mnum).length &#x3D;&#x3D;1 )&#123;mnum &#x3D; &quot;0&quot; + mnum;&#125;</span><br><span class="line">        seconds &#x3D; (now - grt ) &#x2F; 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);</span><br><span class="line">        snum &#x3D; Math.round(seconds); if(String(snum).length &#x3D;&#x3D;1 )&#123;snum &#x3D; &quot;0&quot; + snum;&#125;</span><br><span class="line">        document.getElementById(&quot;timeDate&quot;).innerHTML &#x3D; &quot;本站已安全运行 &quot;+dnum+&quot; 天 &quot;;</span><br><span class="line">        document.getElementById(&quot;times&quot;).innerHTML &#x3D; hnum + &quot; 小时 &quot; + mnum + &quot; 分 &quot; + snum + &quot; 秒&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">setInterval(&quot;createtime()&quot;,250);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
 ]]></content>
       <categories>
         <category>实战记录</category>
@@ -110,36 +98,6 @@
 ]]></content>
       <categories>
         <category>入门系列</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>个人偏爱的NexT主题美化</title>
-    <url>/2020/03/24/%E4%B8%AA%E4%BA%BA%E5%81%8F%E7%88%B1%E7%9A%84NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_003.jpg" alt=""></p>
-<p>基于人类对于美好事物的不断追求，催生了这篇有关美化的内容。</p>
-<p>明知是个坑，还是得要跳啊！在此献上我所爱的NexT主题美化内容。</p>
-<a id="more"></a>
-
-<hr>
-<h1 id="鼠标点击特效"><a href="#鼠标点击特效" class="headerlink" title="鼠标点击特效"></a>鼠标点击特效</h1><p>对美观和运行速度的两方考虑，我更喜欢心形鼠标点击特效。</p>
-<h2 id="创建js文件"><a href="#创建js文件" class="headerlink" title="创建js文件"></a>创建js文件</h2><p>在<code>./themes/next/source/js</code>中新建<code>clicklove.js</code>，添加代码</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span>(<span class="params">e,t,a</span>)</span>&#123;<span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params"></span>)</span>&#123;c(<span class="string">".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"</span>),o(),r()&#125;<span class="function"><span class="keyword">function</span> <span class="title">r</span>(<span class="params"></span>)</span>&#123;<span class="keyword">for</span>(<span class="keyword">var</span> e=<span class="number">0</span>;e&lt;d.length;e++)d[e].alpha&lt;=<span class="number">0</span>?(t.body.removeChild(d[e].el),d.splice(e,<span class="number">1</span>)):(d[e].y--,d[e].scale+=<span class="number">.004</span>,d[e].alpha-=<span class="number">.013</span>,d[e].el.style.cssText=<span class="string">"left:"</span>+d[e].x+<span class="string">"px;top:"</span>+d[e].y+<span class="string">"px;opacity:"</span>+d[e].alpha+<span class="string">";transform:scale("</span>+d[e].scale+<span class="string">","</span>+d[e].scale+<span class="string">") rotate(45deg);background:"</span>+d[e].color+<span class="string">";z-index:99999"</span>);requestAnimationFrame(r)&#125;<span class="function"><span class="keyword">function</span> <span class="title">o</span>(<span class="params"></span>)</span>&#123;<span class="keyword">var</span> t=<span class="string">"function"</span>==<span class="keyword">typeof</span> e.onclick&amp;&amp;e.onclick;e.onclick=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;t&amp;&amp;t(),i(e)&#125;&#125;<span class="function"><span class="keyword">function</span> <span class="title">i</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">var</span> a=t.createElement(<span class="string">"div"</span>);a.className=<span class="string">"heart"</span>,d.push(&#123;<span class="attr">el</span>:a,<span class="attr">x</span>:e.clientX<span class="number">-5</span>,<span class="attr">y</span>:e.clientY<span class="number">-5</span>,<span class="attr">scale</span>:<span class="number">1</span>,<span class="attr">alpha</span>:<span class="number">1</span>,<span class="attr">color</span>:s()&#125;),t.body.appendChild(a)&#125;<span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">var</span> a=t.createElement(<span class="string">"style"</span>);a.type=<span class="string">"text/css"</span>;<span class="keyword">try</span>&#123;a.appendChild(t.createTextNode(e))&#125;<span class="keyword">catch</span>(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].appendChild(a)&#125;<span class="function"><span class="keyword">function</span> <span class="title">s</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span><span class="string">"rgb("</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">","</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">","</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">")"</span>&#125;<span class="keyword">var</span> d=[];e.requestAnimationFrame=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;setTimeout(e,<span class="number">1e3</span>/<span class="number">60</span>)&#125;&#125;(),n()&#125;(<span class="built_in">window</span>,<span class="built_in">document</span>);</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="修改layout文件"><a href="#修改layout文件" class="headerlink" title="修改layout文件"></a>修改layout文件</h2><p>打开<code>./themes/next/layout/_layout.swig</code>并在末尾添加以下代码</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 页面点击心形 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/clicklove.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="网站运行时间"><a href="#网站运行时间" class="headerlink" title="网站运行时间"></a>网站运行时间</h1><p>打开<code>.\themes\next\layout\_partials\footer.swig</code>并添加下列代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;timeDate&quot;&gt;载入天数...&lt;&#x2F;span&gt;&lt;span id&#x3D;&quot;times&quot;&gt;载入时分秒...&lt;&#x2F;span&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var now &#x3D; new Date();</span><br><span class="line">    function createtime() &#123;</span><br><span class="line">        var grt&#x3D; new Date(&quot;03&#x2F;31&#x2F;2019 00:00:00&quot;);</span><br><span class="line">        now.setTime(now.getTime()+250);</span><br><span class="line">        days &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 &#x2F; 24; dnum &#x3D; Math.floor(days);</span><br><span class="line">        hours &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 - (24 * dnum); hnum &#x3D; Math.floor(hours);</span><br><span class="line">        if(String(hnum).length &#x3D;&#x3D;1 )&#123;hnum &#x3D; &quot;0&quot; + hnum;&#125; minutes &#x3D; (now - grt ) &#x2F; 1000 &#x2F;60 - (24 * 60 * dnum) - (60 * hnum);</span><br><span class="line">        mnum &#x3D; Math.floor(minutes); if(String(mnum).length &#x3D;&#x3D;1 )&#123;mnum &#x3D; &quot;0&quot; + mnum;&#125;</span><br><span class="line">        seconds &#x3D; (now - grt ) &#x2F; 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);</span><br><span class="line">        snum &#x3D; Math.round(seconds); if(String(snum).length &#x3D;&#x3D;1 )&#123;snum &#x3D; &quot;0&quot; + snum;&#125;</span><br><span class="line">        document.getElementById(&quot;timeDate&quot;).innerHTML &#x3D; &quot;本站已安全运行 &quot;+dnum+&quot; 天 &quot;;</span><br><span class="line">        document.getElementById(&quot;times&quot;).innerHTML &#x3D; hnum + &quot; 小时 &quot; + mnum + &quot; 分 &quot; + snum + &quot; 秒&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">setInterval(&quot;createtime()&quot;,250);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<hr>
-]]></content>
-      <categories>
-        <category>实战记录</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -240,6 +198,88 @@
 ]]></content>
       <categories>
         <category>妙用好招</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从安装Hexo开始搭建个人博客</title>
+    <url>/2020/03/19/%E4%BB%8E%E5%AE%89%E8%A3%85Hexo%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_002.jpg" alt=""></p>
+<p>从安装Hexo开始，一步一步搭建个人博客。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="1-什么是Hexo"><a href="#1-什么是Hexo" class="headerlink" title="1.什么是Hexo"></a>1.什么是Hexo</h1><p>上篇<a href="http://pavlova-liu.github.io/2020/03/19/%E4%BD%A0%E5%8F%AF%E8%83%BD%E6%B2%A1%E4%BB%94%E7%BB%86%E4%BA%86%E8%A7%A3%E8%BF%87%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">你可能没仔细了解过什么是静态博客</a>，简单介绍了下静态、动态博客。</p>
+<p>现在我们先看看Hexo官方的介绍。</p>
+<blockquote>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+</blockquote>
+<p>Hexo官网已经有了博客搭建的详细教程，可直接移步查看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">文档</a></p>
+<p>至于写这一篇博客搭建的记录，主要是按着官方教程做的过程中，出现了太多意料不到的问题，对于新手小白实在不友善。因此我觉得有记录的必要。</p>
+<hr>
+<h1 id="2-安装前提"><a href="#2-安装前提" class="headerlink" title="2.安装前提"></a>2.安装前提</h1><p>只需安装下列应用程序：</p>
+<ul>
+<li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a> (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)</li>
+<li><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
+</ul>
+<p>安装完成后，才可开始安装Hexo。</p>
+<h2 id="2-1-安装Node-js"><a href="#2-1-安装Node-js" class="headerlink" title="2.1.安装Node.js"></a>2.1.安装Node.js</h2><p>根据安装教程一般就直接下一步，确保要勾选<strong>Add to PATH</strong>选项（默认已勾选）</p>
+<p>安装完后，显示出已安装Node.js和npm。</p>
+<blockquote>
+<p><strong>NPM</strong>（原简称<strong>节点包管理器</strong>）是一个包管理器的JavaScript的编程语言。它是JavaScript运行时环境Node.js的默认包管理器</p>
+</blockquote>
+<p>在终端上查看，<code>-v</code>即version，显示版本号。以下是我的配置，这样便是安装成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">❯ node -v</span><br><span class="line">v12.16.1</span><br><span class="line"></span><br><span class="line">❯ npm -v</span><br><span class="line">6.13.4</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="2-2-安装Git"><a href="#2-2-安装Git" class="headerlink" title="2.2 安装Git"></a>2.2 安装Git</h2><p>初次安装完成后，需要用 <code>git config</code> 配置 Git。 首先要做的事情就是设置你的名字和邮件地址：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;John Doe&quot;</span><br><span class="line">git config --global user.email johndoe@example.com</span><br></pre></td></tr></table></figure>
+
+<p>对Git有疑惑的可看官方<a href="https://git-scm.com/docs" target="_blank" rel="noopener">文档</a>和<a href="https://www.runoob.com/git/git-tutorial.html" target="_blank" rel="noopener">菜鸟教程</a></p>
+<hr>
+<h1 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3.安装Hexo"></a>3.安装Hexo</h1><p>当准备程序安装完成后，开始安装Hexo。</p>
+<p>很简单一条命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>安装完后通过<code>hexo -v</code>，如果显示出版本号即安装成功。</p>
+<hr>
+<h1 id="4-建站"><a href="#4-建站" class="headerlink" title="4.建站"></a>4.建站</h1><p>安装Hexo后，将在指定文件夹中新建所需文件。这里文件夹可自己命名。我命名为<code>blog</code>，以后若是出了什么错误大不了把<code>blog</code>删掉重来。</p>
+<p>还是几条命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>新建完，去blog查看目录。<code>_conofig.yml</code>是Hexo的配置文件。<code>_posts</code>是存放本地发布的文章。<code>themes</code>存放主题文件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="5-生成静态页面"><a href="#5-生成静态页面" class="headerlink" title="5.生成静态页面"></a>5.生成静态页面</h1><p>现在可以开启Hexo博客的预览了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p><code>g</code>是<code>generate</code>，<code>s</code>即<code>server</code>，此时会提供一个本地预览端口<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
+<p>点击进入可以看到Hexo的静态网页已生成，如此便是安装成功了。</p>
+<hr>
+<h1 id="6-问题解决"><a href="#6-问题解决" class="headerlink" title="6.问题解决"></a>6.问题解决</h1><p>就这几个步骤，我卡了半天。因为在国内原因npm下载太慢了，不成功的同学可以把npm换成淘宝的镜像cnpm来下载。以后即可都用cnpm代替npm。</p>
+<p>安装cnpm </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org</span></span><br></pre></td></tr></table></figure>
+
+<p>确认cnpm安装成功</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
+
+<p>利用cnpm来安装Hexo</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<p>确认Hexo安装成功</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="7-最后"><a href="#7-最后" class="headerlink" title="7.最后"></a>7.最后</h1><p>安装好Hexo后，我们要对网站进行配置，安装主题和部署到远端服务器。</p>
+<p>不慌，慢慢来。</p>
+<hr>
+<h1 id="8-参考"><a href="#8-参考" class="headerlink" title="8.参考"></a>8.参考</h1><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">文档</a></p>
+]]></content>
+      <categories>
+        <category>实战记录</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -459,46 +499,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>以NexT主题为例讲讲如何更换Hexo博客主题</title>
-    <url>/2020/03/21/%E4%BB%A5NexT%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B%E8%AE%B2%E8%AE%B2%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_004.jpg" alt=""></p>
-<p>搭建好了个人博客之后，很多人觉得官方的<code>landscape</code>主题不好看，那本篇文章以<code>NexT</code>主题为例来讲下如何更换主题和配置主题。</p>
-<a id="more"></a>
-
-<hr>
-<h1 id="1-下载最新版本"><a href="#1-下载最新版本" class="headerlink" title="1.下载最新版本"></a>1.下载最新版本</h1><p>这是官方<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题页面</a>，浏览并选中一款我们喜欢的主题。</p>
-<p>我选中了这款优雅的主题<code>NexT</code>。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/162139.png" alt=""></p>
-<p>我们直接将其克隆到博客themes目录下即可。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/162459.png" alt=""></p>
-<p>以下是命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes\next</span><br></pre></td></tr></table></figure>
-
-<p>此外由于NexT主题每个月都会发布新版本，所以我们还得加一个命令更新</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd themes&#x2F;next</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="2-设置"><a href="#2-设置" class="headerlink" title="2.设置"></a>2.设置</h1><p>安装完后就可以在<strong>根目录下的配置文件_config,yml</strong>进行设置，</p>
-<p>找到<code>theme</code>关键字，把<code>landscape</code>换位<code>next</code>即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<p>若选中了别的主题，可以看主题的README文件，方法步骤都一样，大差不差。</p>
-<hr>
-<h1 id="3-启用"><a href="#3-启用" class="headerlink" title="3.启用"></a>3.启用</h1><p>切换主题前先清除Hexo缓存，再来生成并部署到远端。</p>
-<p>三部曲走起：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="4-最后"><a href="#4-最后" class="headerlink" title="4.最后"></a>4.最后</h1><p>主题的配置大家可以自己慢慢去玩，添加超链接、添加打赏、动画啊，还有就是NexT常常更新，不同版本一些配置可能不一样，大家可以根据文档教程<a href="https://theme-next.org/" target="_blank" rel="noopener">NexT主题</a>来慢慢折腾。</p>
-]]></content>
-      <categories>
-        <category>实战记录</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
