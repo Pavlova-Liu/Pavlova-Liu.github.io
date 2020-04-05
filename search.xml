@@ -1,90 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>个人偏爱的NexT主题美化</title>
-    <url>/2020/03/24/%E4%B8%AA%E4%BA%BA%E5%81%8F%E7%88%B1%E7%9A%84NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_003.jpg" alt=""></p>
-<p>基于人类对于美好事物的不断追求，催生了这篇有关美化的内容。</p>
-<p>明知是个坑，还是得要跳啊！在此献上我所爱的NexT主题美化内容。</p>
-<a id="more"></a>
-
-<hr>
-<h1 id="鼠标点击特效"><a href="#鼠标点击特效" class="headerlink" title="鼠标点击特效"></a>鼠标点击特效</h1><p>对美观和运行速度的两方考虑，我更喜欢心形鼠标点击特效。</p>
-<h2 id="创建js文件"><a href="#创建js文件" class="headerlink" title="创建js文件"></a>创建js文件</h2><p>在<code>./themes/next/source/js</code>中新建<code>clicklove.js</code>，添加代码</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span>(<span class="params">e,t,a</span>)</span>&#123;<span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params"></span>)</span>&#123;c(<span class="string">".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"</span>),o(),r()&#125;<span class="function"><span class="keyword">function</span> <span class="title">r</span>(<span class="params"></span>)</span>&#123;<span class="keyword">for</span>(<span class="keyword">var</span> e=<span class="number">0</span>;e&lt;d.length;e++)d[e].alpha&lt;=<span class="number">0</span>?(t.body.removeChild(d[e].el),d.splice(e,<span class="number">1</span>)):(d[e].y--,d[e].scale+=<span class="number">.004</span>,d[e].alpha-=<span class="number">.013</span>,d[e].el.style.cssText=<span class="string">"left:"</span>+d[e].x+<span class="string">"px;top:"</span>+d[e].y+<span class="string">"px;opacity:"</span>+d[e].alpha+<span class="string">";transform:scale("</span>+d[e].scale+<span class="string">","</span>+d[e].scale+<span class="string">") rotate(45deg);background:"</span>+d[e].color+<span class="string">";z-index:99999"</span>);requestAnimationFrame(r)&#125;<span class="function"><span class="keyword">function</span> <span class="title">o</span>(<span class="params"></span>)</span>&#123;<span class="keyword">var</span> t=<span class="string">"function"</span>==<span class="keyword">typeof</span> e.onclick&amp;&amp;e.onclick;e.onclick=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;t&amp;&amp;t(),i(e)&#125;&#125;<span class="function"><span class="keyword">function</span> <span class="title">i</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">var</span> a=t.createElement(<span class="string">"div"</span>);a.className=<span class="string">"heart"</span>,d.push(&#123;<span class="attr">el</span>:a,<span class="attr">x</span>:e.clientX<span class="number">-5</span>,<span class="attr">y</span>:e.clientY<span class="number">-5</span>,<span class="attr">scale</span>:<span class="number">1</span>,<span class="attr">alpha</span>:<span class="number">1</span>,<span class="attr">color</span>:s()&#125;),t.body.appendChild(a)&#125;<span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">var</span> a=t.createElement(<span class="string">"style"</span>);a.type=<span class="string">"text/css"</span>;<span class="keyword">try</span>&#123;a.appendChild(t.createTextNode(e))&#125;<span class="keyword">catch</span>(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].appendChild(a)&#125;<span class="function"><span class="keyword">function</span> <span class="title">s</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span><span class="string">"rgb("</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">","</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">","</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">")"</span>&#125;<span class="keyword">var</span> d=[];e.requestAnimationFrame=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;setTimeout(e,<span class="number">1e3</span>/<span class="number">60</span>)&#125;&#125;(),n()&#125;(<span class="built_in">window</span>,<span class="built_in">document</span>);</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="修改layout文件"><a href="#修改layout文件" class="headerlink" title="修改layout文件"></a>修改layout文件</h2><p>打开<code>./themes/next/layout/_layout.swig</code>并在末尾添加以下代码</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 页面点击心形 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/clicklove.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="网站运行时间"><a href="#网站运行时间" class="headerlink" title="网站运行时间"></a>网站运行时间</h1><p>打开<code>.\themes\next\layout\_partials\footer.swig</code>并添加下列代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;timeDate&quot;&gt;载入天数...&lt;&#x2F;span&gt;&lt;span id&#x3D;&quot;times&quot;&gt;载入时分秒...&lt;&#x2F;span&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var now &#x3D; new Date();</span><br><span class="line">    function createtime() &#123;</span><br><span class="line">        var grt&#x3D; new Date(&quot;03&#x2F;31&#x2F;2019 00:00:00&quot;);</span><br><span class="line">        now.setTime(now.getTime()+250);</span><br><span class="line">        days &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 &#x2F; 24; dnum &#x3D; Math.floor(days);</span><br><span class="line">        hours &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 - (24 * dnum); hnum &#x3D; Math.floor(hours);</span><br><span class="line">        if(String(hnum).length &#x3D;&#x3D;1 )&#123;hnum &#x3D; &quot;0&quot; + hnum;&#125; minutes &#x3D; (now - grt ) &#x2F; 1000 &#x2F;60 - (24 * 60 * dnum) - (60 * hnum);</span><br><span class="line">        mnum &#x3D; Math.floor(minutes); if(String(mnum).length &#x3D;&#x3D;1 )&#123;mnum &#x3D; &quot;0&quot; + mnum;&#125;</span><br><span class="line">        seconds &#x3D; (now - grt ) &#x2F; 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);</span><br><span class="line">        snum &#x3D; Math.round(seconds); if(String(snum).length &#x3D;&#x3D;1 )&#123;snum &#x3D; &quot;0&quot; + snum;&#125;</span><br><span class="line">        document.getElementById(&quot;timeDate&quot;).innerHTML &#x3D; &quot;本站已安全运行 &quot;+dnum+&quot; 天 &quot;;</span><br><span class="line">        document.getElementById(&quot;times&quot;).innerHTML &#x3D; hnum + &quot; 小时 &quot; + mnum + &quot; 分 &quot; + snum + &quot; 秒&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">setInterval(&quot;createtime()&quot;,250);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<hr>
-]]></content>
-      <categories>
-        <category>实战记录</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用PicGo小工具白嫖Gitee(码云)作为博客图床</title>
-    <url>/2020/03/25/%E4%BD%BF%E7%94%A8PicGo%E5%B0%8F%E5%B7%A5%E5%85%B7%E7%99%BD%E5%AB%96Gitee-%E7%A0%81%E4%BA%91-%E4%BD%9C%E4%B8%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_008.jpg" alt=""></p>
-<p>很多小伙伴在写博客的过程中都遇到一个普遍的问题，那就是如何引用和存放图片。博客图片存放于本地占内存，存放于GitHub上访问速度太慢，好在国内有许多可以设置为图床的地方，比如微博啊、码云啊、七牛云啊。本文所讲的正是将Gitee码云作为个人博客的免费图床。</p>
-<a id="more"></a>
-
-<hr>
-<h1 id="创建码云图床库"><a href="#创建码云图床库" class="headerlink" title="创建码云图床库"></a>创建码云图床库</h1><p>在这之前先注册好一个码云账号。</p>
-<p>1.新建仓库</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_03-58-49.png" alt=""></p>
-<p>2.设置仓库</p>
-<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-06.png" style="zoom:80%;" />
-
-<p>注意：仓库要设为公开，勾选使用README文件初始化这个仓库</p>
-<hr>
-<h1 id="小工具PicGo配置"><a href="#小工具PicGo配置" class="headerlink" title="小工具PicGo配置"></a>小工具PicGo配置</h1><p>因为每次上传单张图片真的很麻烦，所以用到了Picgo这个极大提高生产力的图片上传和管理的工具，一次性部署爽歪歪。</p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://github.com/Molunerfinn/PicGo/realeses" target="_blank" rel="noopener">下载地址</a></p>
-<p>安装后主界面</p>
-<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-19-10.png" style="zoom:80%;" />
-
-<hr>
-<h2 id="图床设置"><a href="#图床设置" class="headerlink" title="图床设置"></a>图床设置</h2><p>点击插件设置，输入<code>gitee</code>，安装<code>gitee-uploader</code>插件。</p>
-<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-21-11.png" style="zoom:80%;" />
-
-<p>点击图床设置，选中<code>gitee</code>，我们开始配置插件。</p>
-<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-26-09.png" style="zoom:80%;" />
-
-<ul>
-<li>repo: 用户名/仓库名称，如我的<code>Pavlova-Liu/images_store</code></li>
-<li>branch: 分支，这里写上<code>master</code></li>
-<li>token: 私人令牌</li>
-<li>path: 路径，一般写上<code>img</code></li>
-<li>customPath和customURL都不用填</li>
-</ul>
-<hr>
-<h2 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h2><p>登录进入码云，点击头像，进入设置</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-26.png" alt=""></p>
-<p>找到私人令牌，并点击生成新令牌，把projects这一项勾选上，其他不用勾，然后点击提交。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-01-24.png" alt=""></p>
-<p>验证密码后就已经生成了token，复制到PicGo的配置里去。注意此令牌只显示一次，搞丢了又要重新生成。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-33-59.png" alt=""></p>
-<p>保存设置，设置gitee为默认图床。</p>
-<hr>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>接下来直接往PicGo里拖动图片就可以完成图片上传，需要引用图片时，赋值PicGo生成的图片链接即可。后续的图片操作只需在PicGo里执行就行。</p>
-<p>超级方便的有木有！</p>
-]]></content>
-      <categories>
-        <category>妙用好招</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>从安装Hexo开始搭建个人博客</title>
     <url>/2020/03/19/%E4%BB%8E%E5%AE%89%E8%A3%85Hexo%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_002.jpg" alt=""></p>
@@ -167,6 +83,36 @@
       </tags>
   </entry>
   <entry>
+    <title>个人偏爱的NexT主题美化</title>
+    <url>/2020/03/24/%E4%B8%AA%E4%BA%BA%E5%81%8F%E7%88%B1%E7%9A%84NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_003.jpg" alt=""></p>
+<p>基于人类对于美好事物的不断追求，催生了这篇有关美化的内容。</p>
+<p>明知是个坑，还是得要跳啊！在此献上我所爱的NexT主题美化内容。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="鼠标点击特效"><a href="#鼠标点击特效" class="headerlink" title="鼠标点击特效"></a>鼠标点击特效</h1><p>对美观和运行速度的两方考虑，我更喜欢心形鼠标点击特效。</p>
+<h2 id="创建js文件"><a href="#创建js文件" class="headerlink" title="创建js文件"></a>创建js文件</h2><p>在<code>./themes/next/source/js</code>中新建<code>clicklove.js</code>，添加代码</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span>(<span class="params">e,t,a</span>)</span>&#123;<span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params"></span>)</span>&#123;c(<span class="string">".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"</span>),o(),r()&#125;<span class="function"><span class="keyword">function</span> <span class="title">r</span>(<span class="params"></span>)</span>&#123;<span class="keyword">for</span>(<span class="keyword">var</span> e=<span class="number">0</span>;e&lt;d.length;e++)d[e].alpha&lt;=<span class="number">0</span>?(t.body.removeChild(d[e].el),d.splice(e,<span class="number">1</span>)):(d[e].y--,d[e].scale+=<span class="number">.004</span>,d[e].alpha-=<span class="number">.013</span>,d[e].el.style.cssText=<span class="string">"left:"</span>+d[e].x+<span class="string">"px;top:"</span>+d[e].y+<span class="string">"px;opacity:"</span>+d[e].alpha+<span class="string">";transform:scale("</span>+d[e].scale+<span class="string">","</span>+d[e].scale+<span class="string">") rotate(45deg);background:"</span>+d[e].color+<span class="string">";z-index:99999"</span>);requestAnimationFrame(r)&#125;<span class="function"><span class="keyword">function</span> <span class="title">o</span>(<span class="params"></span>)</span>&#123;<span class="keyword">var</span> t=<span class="string">"function"</span>==<span class="keyword">typeof</span> e.onclick&amp;&amp;e.onclick;e.onclick=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;t&amp;&amp;t(),i(e)&#125;&#125;<span class="function"><span class="keyword">function</span> <span class="title">i</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">var</span> a=t.createElement(<span class="string">"div"</span>);a.className=<span class="string">"heart"</span>,d.push(&#123;<span class="attr">el</span>:a,<span class="attr">x</span>:e.clientX<span class="number">-5</span>,<span class="attr">y</span>:e.clientY<span class="number">-5</span>,<span class="attr">scale</span>:<span class="number">1</span>,<span class="attr">alpha</span>:<span class="number">1</span>,<span class="attr">color</span>:s()&#125;),t.body.appendChild(a)&#125;<span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">var</span> a=t.createElement(<span class="string">"style"</span>);a.type=<span class="string">"text/css"</span>;<span class="keyword">try</span>&#123;a.appendChild(t.createTextNode(e))&#125;<span class="keyword">catch</span>(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].appendChild(a)&#125;<span class="function"><span class="keyword">function</span> <span class="title">s</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span><span class="string">"rgb("</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">","</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">","</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">")"</span>&#125;<span class="keyword">var</span> d=[];e.requestAnimationFrame=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;setTimeout(e,<span class="number">1e3</span>/<span class="number">60</span>)&#125;&#125;(),n()&#125;(<span class="built_in">window</span>,<span class="built_in">document</span>);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="修改layout文件"><a href="#修改layout文件" class="headerlink" title="修改layout文件"></a>修改layout文件</h2><p>打开<code>./themes/next/layout/_layout.swig</code>并在末尾添加以下代码</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 页面点击心形 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/clicklove.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="网站运行时间"><a href="#网站运行时间" class="headerlink" title="网站运行时间"></a>网站运行时间</h1><p>打开<code>.\themes\next\layout\_partials\footer.swig</code>并添加下列代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;timeDate&quot;&gt;载入天数...&lt;&#x2F;span&gt;&lt;span id&#x3D;&quot;times&quot;&gt;载入时分秒...&lt;&#x2F;span&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var now &#x3D; new Date();</span><br><span class="line">    function createtime() &#123;</span><br><span class="line">        var grt&#x3D; new Date(&quot;03&#x2F;31&#x2F;2019 00:00:00&quot;);</span><br><span class="line">        now.setTime(now.getTime()+250);</span><br><span class="line">        days &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 &#x2F; 24; dnum &#x3D; Math.floor(days);</span><br><span class="line">        hours &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 - (24 * dnum); hnum &#x3D; Math.floor(hours);</span><br><span class="line">        if(String(hnum).length &#x3D;&#x3D;1 )&#123;hnum &#x3D; &quot;0&quot; + hnum;&#125; minutes &#x3D; (now - grt ) &#x2F; 1000 &#x2F;60 - (24 * 60 * dnum) - (60 * hnum);</span><br><span class="line">        mnum &#x3D; Math.floor(minutes); if(String(mnum).length &#x3D;&#x3D;1 )&#123;mnum &#x3D; &quot;0&quot; + mnum;&#125;</span><br><span class="line">        seconds &#x3D; (now - grt ) &#x2F; 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);</span><br><span class="line">        snum &#x3D; Math.round(seconds); if(String(snum).length &#x3D;&#x3D;1 )&#123;snum &#x3D; &quot;0&quot; + snum;&#125;</span><br><span class="line">        document.getElementById(&quot;timeDate&quot;).innerHTML &#x3D; &quot;本站已安全运行 &quot;+dnum+&quot; 天 &quot;;</span><br><span class="line">        document.getElementById(&quot;times&quot;).innerHTML &#x3D; hnum + &quot; 小时 &quot; + mnum + &quot; 分 &quot; + snum + &quot; 秒&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">setInterval(&quot;createtime()&quot;,250);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+]]></content>
+      <categories>
+        <category>实战记录</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>以NexT主题为例讲讲如何更换Hexo博客主题</title>
     <url>/2020/03/21/%E4%BB%A5NexT%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B%E8%AE%B2%E8%AE%B2%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/</url>
     <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_004.jpg" alt=""></p>
@@ -240,6 +186,60 @@
       </tags>
   </entry>
   <entry>
+    <title>使用PicGo小工具白嫖Gitee(码云)作为博客图床</title>
+    <url>/2020/03/25/%E4%BD%BF%E7%94%A8PicGo%E5%B0%8F%E5%B7%A5%E5%85%B7%E7%99%BD%E5%AB%96Gitee-%E7%A0%81%E4%BA%91-%E4%BD%9C%E4%B8%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_008.jpg" alt=""></p>
+<p>很多小伙伴在写博客的过程中都遇到一个普遍的问题，那就是如何引用和存放图片。博客图片存放于本地占内存，存放于GitHub上访问速度太慢，好在国内有许多可以设置为图床的地方，比如微博啊、码云啊、七牛云啊。本文所讲的正是将Gitee码云作为个人博客的免费图床。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="创建码云图床库"><a href="#创建码云图床库" class="headerlink" title="创建码云图床库"></a>创建码云图床库</h1><p>在这之前先注册好一个码云账号。</p>
+<p>1.新建仓库</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_03-58-49.png" alt=""></p>
+<p>2.设置仓库</p>
+<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-06.png" style="zoom:80%;" />
+
+<p>注意：仓库要设为公开，勾选使用README文件初始化这个仓库</p>
+<hr>
+<h1 id="小工具PicGo配置"><a href="#小工具PicGo配置" class="headerlink" title="小工具PicGo配置"></a>小工具PicGo配置</h1><p>因为每次上传单张图片真的很麻烦，所以用到了Picgo这个极大提高生产力的图片上传和管理的工具，一次性部署爽歪歪。</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://github.com/Molunerfinn/PicGo/realeses" target="_blank" rel="noopener">下载地址</a></p>
+<p>安装后主界面</p>
+<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-19-10.png" style="zoom:80%;" />
+
+<hr>
+<h2 id="图床设置"><a href="#图床设置" class="headerlink" title="图床设置"></a>图床设置</h2><p>点击插件设置，输入<code>gitee</code>，安装<code>gitee-uploader</code>插件。</p>
+<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-21-11.png" style="zoom:80%;" />
+
+<p>点击图床设置，选中<code>gitee</code>，我们开始配置插件。</p>
+<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-26-09.png" style="zoom:80%;" />
+
+<ul>
+<li>repo: 用户名/仓库名称，如我的<code>Pavlova-Liu/images_store</code></li>
+<li>branch: 分支，这里写上<code>master</code></li>
+<li>token: 私人令牌</li>
+<li>path: 路径，一般写上<code>img</code></li>
+<li>customPath和customURL都不用填</li>
+</ul>
+<hr>
+<h2 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h2><p>登录进入码云，点击头像，进入设置</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-26.png" alt=""></p>
+<p>找到私人令牌，并点击生成新令牌，把projects这一项勾选上，其他不用勾，然后点击提交。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-01-24.png" alt=""></p>
+<p>验证密码后就已经生成了token，复制到PicGo的配置里去。注意此令牌只显示一次，搞丢了又要重新生成。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-33-59.png" alt=""></p>
+<p>保存设置，设置gitee为默认图床。</p>
+<hr>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>接下来直接往PicGo里拖动图片就可以完成图片上传，需要引用图片时，赋值PicGo生成的图片链接即可。后续的图片操作只需在PicGo里执行就行。</p>
+<p>超级方便的有木有！</p>
+]]></content>
+      <categories>
+        <category>妙用好招</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客免密部署到GitHub的小操作</title>
     <url>/2020/04/05/%E5%8D%9A%E5%AE%A2%E5%85%8D%E5%AF%86%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E7%9A%84%E5%B0%8F%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_009.jpg" alt=""></p>
@@ -286,35 +286,6 @@
       </tags>
   </entry>
   <entry>
-    <title>妙用Gitee(码云)提升GitHub下载速度</title>
-    <url>/2020/03/25/%E5%A6%99%E7%94%A8Gitee-%E7%A0%81%E4%BA%91-%E6%8F%90%E5%8D%87GitHub%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_007.jpg" alt=""></p>
-<p>众所周知，GitHub是一个大宝库，藏着许多开源的优秀的项目，然而一个问题是下载速度不堪入目，相信有经验的小伙伴都有那等待克隆下载的痛苦……</p>
-<p>本文就来提供一个妙招，教你再也不用苦等程序的下载了。</p>
-<a id="more"></a>
-
-<hr>
-<h1 id="码云Gitee"><a href="#码云Gitee" class="headerlink" title="码云Gitee"></a>码云Gitee</h1><p>码云(Gitee)平台相当于是国内的GitHub，通过码云的转接，即可实现GitHub上项目的下载加速。</p>
-<p>首先是要确保有一个码云的账户。</p>
-<p>点击加号，选择“从<code>GitHub/GitLab</code>导入仓库”</p>
-<p>填写想导入的仓库的地址，点击导入</p>
-<p>一般要等一会，码云就会克隆出一份同GitHub上一模一样的项目。</p>
-<p>复制码云提供的项目地址，会发现克隆速度已经很快了，很快就能下载完。</p>
-<hr>
-<h1 id="重新关联GitHub"><a href="#重新关联GitHub" class="headerlink" title="重新关联GitHub"></a>重新关联GitHub</h1><p>我们通过码云克隆到本地的项目是关联的码云Gitee的地址，所以还需要我们将本地项目重新关联到GitHub上。</p>
-<p>找到本地仓库目录下的<code>.git</code>文件夹</p>
-<p>打开<code>.git</code>文件夹下的<code>_config</code>配置文件</p>
-<p>将码云Gitee提供的项目地址换回原来的GitHub项目地址</p>
-<hr>
-]]></content>
-      <categories>
-        <category>妙用好招</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>是时候给你的Windows打造一个漂亮的终端了</title>
     <url>/2020/03/26/%E6%98%AF%E6%97%B6%E5%80%99%E7%BB%99%E4%BD%A0%E7%9A%84Windows%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E6%BC%82%E4%BA%AE%E7%9A%84%E7%BB%88%E7%AB%AF%E4%BA%86/</url>
     <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_001.jpg" alt=""></p>
@@ -358,6 +329,35 @@
       </categories>
       <tags>
         <tag>Terminal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>妙用Gitee(码云)提升GitHub下载速度</title>
+    <url>/2020/03/25/%E5%A6%99%E7%94%A8Gitee-%E7%A0%81%E4%BA%91-%E6%8F%90%E5%8D%87GitHub%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_007.jpg" alt=""></p>
+<p>众所周知，GitHub是一个大宝库，藏着许多开源的优秀的项目，然而一个问题是下载速度不堪入目，相信有经验的小伙伴都有那等待克隆下载的痛苦……</p>
+<p>本文就来提供一个妙招，教你再也不用苦等程序的下载了。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="码云Gitee"><a href="#码云Gitee" class="headerlink" title="码云Gitee"></a>码云Gitee</h1><p>码云(Gitee)平台相当于是国内的GitHub，通过码云的转接，即可实现GitHub上项目的下载加速。</p>
+<p>首先是要确保有一个码云的账户。</p>
+<p>点击加号，选择“从<code>GitHub/GitLab</code>导入仓库”</p>
+<p>填写想导入的仓库的地址，点击导入</p>
+<p>一般要等一会，码云就会克隆出一份同GitHub上一模一样的项目。</p>
+<p>复制码云提供的项目地址，会发现克隆速度已经很快了，很快就能下载完。</p>
+<hr>
+<h1 id="重新关联GitHub"><a href="#重新关联GitHub" class="headerlink" title="重新关联GitHub"></a>重新关联GitHub</h1><p>我们通过码云克隆到本地的项目是关联的码云Gitee的地址，所以还需要我们将本地项目重新关联到GitHub上。</p>
+<p>找到本地仓库目录下的<code>.git</code>文件夹</p>
+<p>打开<code>.git</code>文件夹下的<code>_config</code>配置文件</p>
+<p>将码云Gitee提供的项目地址换回原来的GitHub项目地址</p>
+<hr>
+]]></content>
+      <categories>
+        <category>妙用好招</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
