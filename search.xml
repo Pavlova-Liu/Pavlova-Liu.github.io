@@ -31,6 +31,360 @@
       </tags>
   </entry>
   <entry>
+    <title>使用PicGo小工具白嫖Gitee(码云)作为博客图床</title>
+    <url>/2020/03/25/%E4%BD%BF%E7%94%A8PicGo%E5%B0%8F%E5%B7%A5%E5%85%B7%E7%99%BD%E5%AB%96Gitee-%E7%A0%81%E4%BA%91-%E4%BD%9C%E4%B8%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_008.jpg" alt=""></p>
+<p>很多小伙伴在写博客的过程中都遇到一个普遍的问题，那就是如何引用和存放图片。博客图片存放于本地占内存，存放于GitHub上访问速度太慢，好在国内有许多可以设置为图床的地方，比如微博啊、码云啊、七牛云啊。本文所讲的正是将Gitee码云作为个人博客的免费图床。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="创建码云图床库"><a href="#创建码云图床库" class="headerlink" title="创建码云图床库"></a>创建码云图床库</h1><p>在这之前先注册好一个码云账号。</p>
+<p>1.新建仓库</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_03-58-49.png" alt=""></p>
+<p>2.设置仓库</p>
+<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-06.png" style="zoom:80%;" />
+
+<p>注意：仓库要设为公开，勾选使用README文件初始化这个仓库</p>
+<hr>
+<h1 id="小工具PicGo配置"><a href="#小工具PicGo配置" class="headerlink" title="小工具PicGo配置"></a>小工具PicGo配置</h1><p>因为每次上传单张图片真的很麻烦，所以用到了Picgo这个极大提高生产力的图片上传和管理的工具，一次性部署爽歪歪。</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://github.com/Molunerfinn/PicGo/realeses" target="_blank" rel="noopener">下载地址</a></p>
+<p>安装后主界面</p>
+<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-19-10.png" style="zoom:80%;" />
+
+<hr>
+<h2 id="图床设置"><a href="#图床设置" class="headerlink" title="图床设置"></a>图床设置</h2><p>点击插件设置，输入<code>gitee</code>，安装<code>gitee-uploader</code>插件。</p>
+<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-21-11.png" style="zoom:80%;" />
+
+<p>点击图床设置，选中<code>gitee</code>，我们开始配置插件。</p>
+<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-26-09.png" style="zoom:80%;" />
+
+<ul>
+<li>repo: 用户名/仓库名称，如我的<code>Pavlova-Liu/images_store</code></li>
+<li>branch: 分支，这里写上<code>master</code></li>
+<li>token: 私人令牌</li>
+<li>path: 路径，一般写上<code>img</code></li>
+<li>customPath和customURL都不用填</li>
+</ul>
+<hr>
+<h2 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h2><p>登录进入码云，点击头像，进入设置</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-26.png" alt=""></p>
+<p>找到私人令牌，并点击生成新令牌，把projects这一项勾选上，其他不用勾，然后点击提交。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-01-24.png" alt=""></p>
+<p>验证密码后就已经生成了token，复制到PicGo的配置里去。注意此令牌只显示一次，搞丢了又要重新生成。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-33-59.png" alt=""></p>
+<p>保存设置，设置gitee为默认图床。</p>
+<hr>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>接下来直接往PicGo里拖动图片就可以完成图片上传，需要引用图片时，赋值PicGo生成的图片链接即可。后续的图片操作只需在PicGo里执行就行。</p>
+<p>超级方便的有木有！</p>
+]]></content>
+      <categories>
+        <category>妙用好招</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你可能没仔细了解过什么是静态博客</title>
+    <url>/2020/03/19/%E4%BD%A0%E5%8F%AF%E8%83%BD%E6%B2%A1%E4%BB%94%E7%BB%86%E4%BA%86%E8%A7%A3%E8%BF%87%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_006.jpg"  />
+
+<p>在我们期待去搭建个人博客之前，还是先了解下所谓的静态博客。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="1-何为静态博客，何为动态博客"><a href="#1-何为静态博客，何为动态博客" class="headerlink" title="1.何为静态博客，何为动态博客"></a>1.何为静态博客，何为动态博客</h1><p>首先，要知道一个网站最基础的部分就是网页，而与其从网页开始写起，不如利用大牛们已经做好的博客生成器来解决网页编写的问题。</p>
+<p>如今有很多好用热门的博客生成器，一般来说，博客生成器分为动态和静态两种。典型的静态博客生成器有：<code>Hexo、Jekyll、Hugo</code>等，典型的动态博客生成器有：<code>WordPress、FarBox、Ghost</code>等。</p>
+<p>那么什么是静态博客，什么是动态博客呢？</p>
+<h2 id="1-1-静态博客"><a href="#1-1-静态博客" class="headerlink" title="1.1.静态博客"></a>1.1.静态博客</h2><p>HTML(超文本标记语言)格式的网页通常被称为静态网页，是直接渲染生成HTML标准的文件呈现给客户端，不需要数据库的支撑就可完成。静态博客中可以包含文本、声音、图像、FLASH动画等。</p>
+<h2 id="1-2-动态博客"><a href="#1-2-动态博客" class="headerlink" title="1.2.动态博客"></a>1.2.动态博客</h2><p>所谓动态，是指网页渲染是通过动态调用再解析而成，生产的网页不是HTML文件，需要服务器端伪装成HTML文件呈现给客户端。“动”不是指网页中的页面元素或者特效在动，而是指与后台数据库进行交互，进行数据传递。比如用户注册登录、留言等功能。</p>
+<hr>
+<h1 id="2-静态博客的优势"><a href="#2-静态博客的优势" class="headerlink" title="2.静态博客的优势"></a>2.静态博客的优势</h1><ul>
+<li>部署简单，降低建站成本</li>
+<li>所占资源相对少</li>
+<li>访问速度更快</li>
+<li>轻量安全性更高</li>
+</ul>
+<p>我的个人博客就是依靠Hexo框架进行搭建的。Hexo是一款基于Node.js的静态博客框架，所需依赖少，搭建简单，生成的静态网页也可以托管到远端服务器上。</p>
+<hr>
+<h1 id="3-参考"><a href="#3-参考" class="headerlink" title="3.参考"></a>3.参考</h1><p><a href="https://www.imydl.com/wzjs/9789.html" target="_blank" rel="noopener">说说 Hexo 静态博客框架</a></p>
+<p>每天坚持一点点！</p>
+]]></content>
+      <categories>
+        <category>入门系列</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>妙用Gitee(码云)提升GitHub下载速度</title>
+    <url>/2020/03/25/%E5%A6%99%E7%94%A8Gitee-%E7%A0%81%E4%BA%91-%E6%8F%90%E5%8D%87GitHub%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_007.jpg" alt=""></p>
+<p>众所周知，GitHub是一个大宝库，藏着许多开源的优秀的项目，然而一个问题是下载速度不堪入目，相信有经验的小伙伴都有那等待克隆下载的痛苦……</p>
+<p>本文就来提供一个妙招，教你再也不用苦等程序的下载了。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="码云Gitee"><a href="#码云Gitee" class="headerlink" title="码云Gitee"></a>码云Gitee</h1><p>码云(Gitee)平台相当于是国内的GitHub，通过码云的转接，即可实现GitHub上项目的下载加速。</p>
+<p>首先是要确保有一个码云的账户。</p>
+<p>点击加号，选择“从<code>GitHub/GitLab</code>导入仓库”</p>
+<p>填写想导入的仓库的地址，点击导入</p>
+<p>一般要等一会，码云就会克隆出一份同GitHub上一模一样的项目。</p>
+<p>复制码云提供的项目地址，会发现克隆速度已经很快了，很快就能下载完。</p>
+<hr>
+<h1 id="重新关联GitHub"><a href="#重新关联GitHub" class="headerlink" title="重新关联GitHub"></a>重新关联GitHub</h1><p>我们通过码云克隆到本地的项目是关联的码云Gitee的地址，所以还需要我们将本地项目重新关联到GitHub上。</p>
+<p>找到本地仓库目录下的<code>.git</code>文件夹</p>
+<p>打开<code>.git</code>文件夹下的<code>_config</code>配置文件</p>
+<p>将码云Gitee提供的项目地址换回原来的GitHub项目地址</p>
+<hr>
+]]></content>
+      <categories>
+        <category>妙用好招</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客免密部署到GitHub的小操作</title>
+    <url>/2020/04/05/%E5%8D%9A%E5%AE%A2%E5%85%8D%E5%AF%86%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E7%9A%84%E5%B0%8F%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_009.jpg" alt=""></p>
+<p>每次写完博客，提交、部署到GitHub上的时候，会要求输入账户名和密码，我们可以通过设置SSH密钥以实现免密部署，来提高生产效率。</p>
+<a id="more"></a>
+
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>由于每次部署时GitHub都要确定用户是否为安全用户，所以要求输入账户名和密码。而SSH就保证了这样的安全。</p>
+<p>SSH是一种网络协议，用于计算机之间的加密登录。一般生成的是<code>id_rsa</code>和<code>id_rsa.pub</code>，一个私钥和一个公钥。</p>
+<p>原理就是将公钥储存到远端主机，私钥储存在本地，登录时远程主机会向用户发送一段随机字符串，用户用自己的私钥加密后，再发回来。远程主机用事先储存的公钥进行解密，如果成功，就证明用户是可信的，直接允许登录shell，不再要求密码。</p>
+<hr>
+<h1 id="检查现有的SSH密钥"><a href="#检查现有的SSH密钥" class="headerlink" title="检查现有的SSH密钥"></a>检查现有的SSH密钥</h1><p>打开Git Bash。输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
+
+<p>查看是否存在SSH密钥，若没有，则生成一个新的SSH密钥。</p>
+<hr>
+<h1 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"GitHub邮箱地址"</span></span><br></pre></td></tr></table></figure>
+
+<p>为了方便，回车三连。</p>
+<p>根据文件的生成路径，找到.ssh文件夹，打开目录下的<code>id_rsa.pub</code>，复制里面的所有内容。</p>
+<hr>
+<h1 id="将SSH密钥添加到GitHub账户"><a href="#将SSH密钥添加到GitHub账户" class="headerlink" title="将SSH密钥添加到GitHub账户"></a>将SSH密钥添加到GitHub账户</h1><p>右上角点击个人资料照片，点击<code>Setting</code></p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-04-05_14-45-24.png" alt=""></p>
+<p>在用户设置边栏找到<code>SSH and GPG keys</code>，点击<code>New SSH key</code>。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-04-05_14-46-00.png" alt=""></p>
+<p><code>Title</code>字段可自行命名一个描述性标签,并在<code>Key</code>中粘贴刚刚所复制内容，点击点击<code>Add SSH key</code>。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-04-05_14-46-19.png" alt=""></p>
+<hr>
+<h1 id="测试SSH密钥的连接"><a href="#测试SSH密钥的连接" class="headerlink" title="测试SSH密钥的连接"></a>测试SSH密钥的连接</h1><p>回到Git bash，输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>首次输入可能会看到警告，键入<code>yes</code>即可。</p>
+<p>成功会返回验证消息：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Hi username! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="修改站点配置文件-config-yml"><a href="#修改站点配置文件-config-yml" class="headerlink" title="修改站点配置文件_config.yml"></a>修改站点配置文件_config.yml</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:xxxx&#x2F;xxxx.github.io.git</span><br><span class="line">  #格式必须是上述格式</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>这样SSH密钥便设置成功啦！</p>
+<hr>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh" target="_blank" rel="noopener">生成SSH密钥</a></p>
+]]></content>
+      <categories>
+        <category>妙用好招</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>是时候给你的Windows打造一个漂亮的终端了</title>
+    <url>/2020/03/26/%E6%98%AF%E6%97%B6%E5%80%99%E7%BB%99%E4%BD%A0%E7%9A%84Windows%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E6%BC%82%E4%BA%AE%E7%9A%84%E7%BB%88%E7%AB%AF%E4%BA%86/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_001.jpg" alt=""></p>
+<p>相比于Mac上那漂亮炫酷的终端，Windows上无论是cmd还是PowerShell都显得有些寒酸了，难道Windows就没有好用且漂亮的终端吗？</p>
+<p>最近，无意间发现了个好东西，当当当，那就是<code>Fluent Terminal</code>，一款基于微软<code>Fluent Design</code>设计理念的终端模拟器，界面精美，操作简单，还在等什么，是时候打造一个漂亮的终端了!</p>
+<a id="more"></a>
+
+<hr>
+<p>先附上官方截图</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/terminal.jpg" alt=""></p>
+<hr>
+<h1 id="下载Fluent-Terminal"><a href="#下载Fluent-Terminal" class="headerlink" title="下载Fluent Terminal"></a>下载Fluent Terminal</h1><p><a href="https://github.com/felixse/FluentTerminal/releases" target="_blank" rel="noopener">下载地址</a></p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-26_16-52-34.png" alt=""></p>
+<p>下载并解压缩，完成后按照官方说明，右键单击<code>Install.ps1</code>，然后选择“使用Powershell运行”。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-26_16-55-15.png" alt=""></p>
+<hr>
+<h1 id="安装oh-my-posh"><a href="#安装oh-my-posh" class="headerlink" title="安装oh-my-posh"></a>安装oh-my-posh</h1><p><code>oh-my-posh</code>类似于PowerShell版本的<code>oh-my-zsh</code>，它是一个PowerShell增强程序。</p>
+<p>1.使用 <code>PowerShell Gallery</code>来安装 <code>oh-my-posh</code>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Install-Module posh-git -Scope CurrentUser</span><br><span class="line">Install-Module oh-my-posh -Scope CurrentUser</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.创建PowerShell的配置文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (!(Test-Path -Path <span class="variable">$PROFILE</span>)) &#123;New-Item -Type File -Path <span class="variable">$PROFILE</span> -Force&#125;</span><br><span class="line">notepad <span class="variable">$PROFILE</span></span><br></pre></td></tr></table></figure>
+
+<p>在配置文件中敲入几行代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Import-Module posh-git</span><br><span class="line">Import-Module oh-my-posh</span><br><span class="line">Set-Theme Paradox #主题</span><br></pre></td></tr></table></figure>
+
+<p>这里的主题根据个人喜好来自行选择。</p>
+<hr>
+<h1 id="下载字体"><a href="#下载字体" class="headerlink" title="下载字体"></a>下载字体</h1><p>有兴趣的小伙伴还可以去下载字体，这里提供一个我正在使用的<a href="https://github.com/powerline/fonts" target="_blank" rel="noopener">字体库</a>。下载完成后同样右键单击<code>Install.ps1</code>，然后选择“使用Powershell运行”。</p>
+<hr>
+<h1 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h1><p>现了刚刚下好的字体，同时你可以设置自己喜欢的主题颜色，调整大小等等。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-26_17-06-02.png" alt=""></p>
+<p>重启打开之后就可以生效了，是不是看起来还不错！</p>
+<hr>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.tickmao.com/2019/08/08/termial-windows-tickmao/" target="_blank" rel="noopener">https://www.tickmao.com/2019/08/08/termial-windows-tickmao/</a></p>
+]]></content>
+      <categories>
+        <category>妙用好招</category>
+      </categories>
+      <tags>
+        <tag>Terminal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>简单几步将Hexo部署到GitHub Pages上</title>
+    <url>/2020/03/20/%E7%AE%80%E5%8D%95%E5%87%A0%E6%AD%A5%E5%B0%86Hexo%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Pages%E4%B8%8A/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_005.jpg" alt=""></p>
+<p>上篇<a href="http://pavlova-liu.github.io/2020/03/19/%E4%BB%8E%E5%AE%89%E8%A3%85Hexo%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener">从安装Hexo开始搭建个人博客</a>说了如何安装Hexo,但是博客不能一直放在本地里用，我们需要将其部署到远端。有个免费的方法是将其部署到GitHub Pages上，现在只要简单几步，我们一鼓作气将其搞定。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="1-注册GitHub账户"><a href="#1-注册GitHub账户" class="headerlink" title="1.注册GitHub账户"></a>1.注册GitHub账户</h1><blockquote>
+<p>GitHub Pages是一个静态站点托管服务，可直接从GitHub上的存储库获取HTML，CSS和JavaScript文件，还可以选择在构建过程中运行这些文件并发布网站。</p>
+</blockquote>
+<p>GitHub是一个宝库，愣着的小伙伴赶紧去注册呀!</p>
+<hr>
+<h1 id="2-创建一个存储库"><a href="#2-创建一个存储库" class="headerlink" title="2.创建一个存储库"></a>2.创建一个存储库</h1><p>点击创建</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/20200320200253.png" alt=""></p>
+<p>创建一个名为<strong>username .github.io的存储库</strong>，其中username是你在GitHub上的用户名。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/tempsnip.png" alt=""></p>
+<hr>
+<h1 id="3-部署"><a href="#3-部署" class="headerlink" title="3. 部署"></a>3. 部署</h1><h2 id="3-1-安装插件"><a href="#3-1-安装插件" class="headerlink" title="3.1.安装插件"></a>3.1.安装插件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-2-修改站点配置文件"><a href="#3-2-修改站点配置文件" class="headerlink" title="3.2.修改站点配置文件"></a>3.2.修改站点配置文件</h2><p>打开站点下的<code>_config,yml</code>文件，添加<code>deploy</code>信息</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repo: https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;username.github.io</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+
+<p>注意将username改为你的GithHub用户名。</p>
+<h2 id="3-3-部署"><a href="#3-3-部署" class="headerlink" title="3.3.部署"></a>3.3.部署</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo cl     &#x2F;&#x2F;清理缓存</span><br><span class="line">hexo g      &#x2F;&#x2F;生成静态文件</span><br><span class="line">hexo d      &#x2F;&#x2F;部署网站到创建的仓库</span><br></pre></td></tr></table></figure>
+
+<p>这样几步下来就可以部署成功了，以后可以直接凭过程中设置的网址访问你的个人网站。</p>
+<hr>
+<h1 id="4-最后"><a href="#4-最后" class="headerlink" title="4.最后"></a>4.最后</h1><p>部署成功后，就可以使用Github提供的那个地址来访问博客了。</p>
+<p>成功部署的可以分享给其他小伙伴们，觉得丑的再看看下一篇如何更换主题。</p>
+<h1 id="5-参考"><a href="#5-参考" class="headerlink" title="5.参考"></a>5.参考</h1><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">文档</a></p>
+<p><a href="https://help.github.com/categories/github-pages-basics/" target="_blank" rel="noopener">GitHub页面</a></p>
+]]></content>
+      <categories>
+        <category>实战记录</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>以NexT主题为例讲讲如何更换Hexo博客主题</title>
+    <url>/2020/03/21/%E4%BB%A5NexT%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B%E8%AE%B2%E8%AE%B2%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_004.jpg" alt=""></p>
+<p>搭建好了个人博客之后，很多人觉得官方的<code>landscape</code>主题不好看，那本篇文章以<code>NexT</code>主题为例来讲下如何更换主题和配置主题。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="1-下载最新版本"><a href="#1-下载最新版本" class="headerlink" title="1.下载最新版本"></a>1.下载最新版本</h1><p>这是官方<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题页面</a>，浏览并选中一款我们喜欢的主题。</p>
+<p>我选中了这款优雅的主题<code>NexT</code>。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/162139.png" alt=""></p>
+<p>我们直接将其克隆到博客themes目录下即可。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/162459.png" alt=""></p>
+<p>以下是命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes\next</span><br></pre></td></tr></table></figure>
+
+<p>此外由于NexT主题每个月都会发布新版本，所以我们还得加一个命令更新</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd themes&#x2F;next</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="2-设置"><a href="#2-设置" class="headerlink" title="2.设置"></a>2.设置</h1><p>安装完后就可以在<strong>根目录下的配置文件_config,yml</strong>进行设置，</p>
+<p>找到<code>theme</code>关键字，把<code>landscape</code>换位<code>next</code>即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
+<p>若选中了别的主题，可以看主题的README文件，方法步骤都一样，大差不差。</p>
+<hr>
+<h1 id="3-启用"><a href="#3-启用" class="headerlink" title="3.启用"></a>3.启用</h1><p>切换主题前先清除Hexo缓存，再来生成并部署到远端。</p>
+<p>三部曲走起：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="4-最后"><a href="#4-最后" class="headerlink" title="4.最后"></a>4.最后</h1><p>主题的配置大家可以自己慢慢去玩，添加超链接、添加打赏、动画啊，还有就是NexT常常更新，不同版本一些配置可能不一样，大家可以根据文档教程<a href="https://theme-next.org/" target="_blank" rel="noopener">NexT主题</a>来慢慢折腾。</p>
+]]></content>
+      <categories>
+        <category>实战记录</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>详解如何在自己电脑上配置freeglut编程环境并跑通</title>
+    <url>/2020/04/03/%E8%AF%A6%E8%A7%A3%E5%A6%82%E4%BD%95%E5%9C%A8%E8%87%AA%E5%B7%B1%E7%94%B5%E8%84%91%E4%B8%8A%E9%85%8D%E7%BD%AEfreeglut%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E5%B9%B6%E8%B7%91%E9%80%9A/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_010.jpg" alt=""></p>
+<p>freeglut是glut库的开源替代方案，想要利用freeglut来辅助完成OpenGL的编程，首先，要在自己电脑上配置好其编程环境。以下为我的环境配置详解。</p>
+<a id="more"></a>
+
+
+
+<h1 id="freeglut的下载"><a href="#freeglut的下载" class="headerlink" title="freeglut的下载"></a>freeglut的下载</h1><p>这里有两种办法，一种是下载源码自己编译，一种是直接下压缩包。</p>
+<ol>
+<li><p><a href="http://freeglut.sourceforge.net/" target="_blank" rel="noopener">源码下载地址</a></p>
+</li>
+<li><p>如果是以VS为编程环境的，可直接下载链接中的MSVC包</p>
+<p><a href="https://www.transmissionzero.co.uk/files/software/development/GLUT/freeglut-MSVC.zip" target="_blank" rel="noopener">MSVC包下载地址</a></p>
+</li>
+</ol>
+<hr>
+<h1 id="freeglut的配置"><a href="#freeglut的配置" class="headerlink" title="freeglut的配置"></a>freeglut的配置</h1><p>将文件拷贝到相应目录下，根据自己想要编32位还是64位版本的程序来选择对应的路径。</p>
+<h2 id="h文件"><a href="#h文件" class="headerlink" title=".h文件"></a>.h文件</h2><p>将<code>\include\GL</code>目录下的所有<code>.h</code>文件复制到 <code>Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\GL</code>目录下;</p>
+<h2 id="lib文件"><a href="#lib文件" class="headerlink" title=".lib文件"></a>.lib文件</h2><ul>
+<li><p>32位版本</p>
+<p>将<code>\lib\x86\</code>中的<code>freeglut.lib</code>文件复制到<code>Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28610\lib</code>目录下;</p>
+</li>
+<li><p>64位版本</p>
+<p>将<code>\lib\x64</code>中的<code>freeglut.lib</code>文件复制到<code>Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28610\lib\x64</code>目录下;</p>
+</li>
+</ul>
+<h2 id="dll文件"><a href="#dll文件" class="headerlink" title=".dll文件"></a>.dll文件</h2><ul>
+<li><p>32位版本</p>
+<p>将<code>\bin\x86\freeglut.dll</code>文件复制<code>c:\Windows\SysWOW64</code>目录下;</p>
+</li>
+<li><p>64位版本</p>
+<p>将<code>\bin\x64\</code>中的<code>freeglut.dll</code>文件复制到<code>c:\Windows\System32</code>目录下;</p>
+</li>
+</ul>
+<hr>
+<h1 id="测试安装是否成功"><a href="#测试安装是否成功" class="headerlink" title="测试安装是否成功"></a>测试安装是否成功</h1><p>创建一个空白的console工程，创建一个C++文件，拷入代码运行。</p>
+<p>提供一个简单的glut程序：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;GL/glut.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	glutInit(&amp;argc, argv);</span><br><span class="line">	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);</span><br><span class="line">	glutInitWindowSize(<span class="number">300</span>, <span class="number">300</span>);</span><br><span class="line">	glutInitWindowPosition(<span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">	glutCreateWindow(<span class="string">"testgl"</span>);</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">char</span>* version = (<span class="keyword">const</span> <span class="keyword">char</span>*)glGetString(GL_VERSION);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"OpenGL 版本: %s\n"</span>, version);</span><br><span class="line">	glutMainLoop();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>若能运行成功，会显示OpenGL的版本。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/1.png" alt=""></p>
+<hr>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在第一次运行VS跑程序时，报错<code>LINK: fatal error LNK1104 无法打开文件&quot;freeglut.lib&quot;</code>，检查了lib、dll文件的路径后并没发现问题，上网查询后发现要进行预处理。</p>
+<p>解决办法：</p>
+<p>【属性】-&gt;【C/C++】-&gt;【预处理器】-&gt;【预处理器定义】，点击【编辑】新增一个<code>NDEBUG</code>。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/2.png" alt=""></p>
+<hr>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://cloud.tencent.com/developer/article/1403418" target="_blank" rel="noopener">FreeGlut配置简介</a></p>
+]]></content>
+      <categories>
+        <category>实战记录</category>
+      </categories>
+      <tags>
+        <tag>OpenGL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>从安装Hexo开始搭建个人博客</title>
     <url>/2020/03/19/%E4%BB%8E%E5%AE%89%E8%A3%85Hexo%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_002.jpg" alt=""></p>
@@ -38,7 +392,7 @@
 <a id="more"></a>
 
 <hr>
-<h1 id="1-什么是Hexo"><a href="#1-什么是Hexo" class="headerlink" title="1.什么是Hexo"></a>1.什么是Hexo</h1><p>上篇<a href="http://pavlova-liu.github.io/2020/03/19/%E4%BD%A0%E5%8F%AF%E8%83%BD%E6%B2%A1%E4%BB%94%E7%BB%86%E4%BA%86%E8%A7%A3%E8%BF%87%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">你可能没仔细了解过什么是静态博客</a>，简单介绍了下静态、动态博客。</p>
+<h1 id="1-什么是Hexo"><a href="#1-什么是Hexo" class="headerlink" title="1.什么是Hexo"></a>1.什么是Hexo</h1><p>上篇<a href="http://pavlova-liu.github.io/2020/03/19/%E4%BD%A0%E5%8F%AF%E8%83%BD%E6%B2%A1%E4%BB%94%E7%BB%86%E4%BA%86%E8%A7%A3%E8%BF%87%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener">你可能没仔细了解过什么是静态博客</a>，简单介绍了下静态、动态博客。</p>
 <p>现在我们先看看Hexo官方的介绍。</p>
 <blockquote>
 <p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
@@ -113,182 +467,6 @@
       </tags>
   </entry>
   <entry>
-    <title>以NexT主题为例讲讲如何更换Hexo博客主题</title>
-    <url>/2020/03/21/%E4%BB%A5NexT%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B%E8%AE%B2%E8%AE%B2%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_004.jpg" alt=""></p>
-<p>搭建好了个人博客之后，很多人觉得官方的<code>landscape</code>主题不好看，那本篇文章以<code>NexT</code>主题为例来讲下如何更换主题和配置主题。</p>
-<a id="more"></a>
-
-<hr>
-<h1 id="1-下载最新版本"><a href="#1-下载最新版本" class="headerlink" title="1.下载最新版本"></a>1.下载最新版本</h1><p>这是官方<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题页面</a>，浏览并选中一款我们喜欢的主题。</p>
-<p>我选中了这款优雅的主题<code>NexT</code>。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/162139.png" alt=""></p>
-<p>我们直接将其克隆到博客themes目录下即可。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/162459.png" alt=""></p>
-<p>以下是命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes\next</span><br></pre></td></tr></table></figure>
-
-<p>此外由于NexT主题每个月都会发布新版本，所以我们还得加一个命令更新</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd themes&#x2F;next</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="2-设置"><a href="#2-设置" class="headerlink" title="2.设置"></a>2.设置</h1><p>安装完后就可以在<strong>根目录下的配置文件_config,yml</strong>进行设置，</p>
-<p>找到<code>theme</code>关键字，把<code>landscape</code>换位<code>next</code>即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<p>若选中了别的主题，可以看主题的README文件，方法步骤都一样，大差不差。</p>
-<hr>
-<h1 id="3-启用"><a href="#3-启用" class="headerlink" title="3.启用"></a>3.启用</h1><p>切换主题前先清除Hexo缓存，再来生成并部署到远端。</p>
-<p>三部曲走起：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="4-最后"><a href="#4-最后" class="headerlink" title="4.最后"></a>4.最后</h1><p>主题的配置大家可以自己慢慢去玩，添加超链接、添加打赏、动画啊，还有就是NexT常常更新，不同版本一些配置可能不一样，大家可以根据文档教程<a href="https://theme-next.org/" target="_blank" rel="noopener">NexT主题</a>来慢慢折腾。</p>
-]]></content>
-      <categories>
-        <category>实战记录</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>你可能没仔细了解过什么是静态博客</title>
-    <url>/2020/03/19/%E4%BD%A0%E5%8F%AF%E8%83%BD%E6%B2%A1%E4%BB%94%E7%BB%86%E4%BA%86%E8%A7%A3%E8%BF%87%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_006.jpg"  />
-
-<p>在我们期待去搭建个人博客之前，还是先了解下所谓的静态博客。</p>
-<a id="more"></a>
-
-<hr>
-<h1 id="1-何为静态博客，何为动态博客"><a href="#1-何为静态博客，何为动态博客" class="headerlink" title="1.何为静态博客，何为动态博客"></a>1.何为静态博客，何为动态博客</h1><p>首先，要知道一个网站最基础的部分就是网页，而与其从网页开始写起，不如利用大牛们已经做好的博客生成器来解决网页编写的问题。</p>
-<p>如今有很多好用热门的博客生成器，一般来说，博客生成器分为动态和静态两种。典型的静态博客生成器有：<code>Hexo、Jekyll、Hugo</code>等，典型的动态博客生成器有：<code>WordPress、FarBox、Ghost</code>等。</p>
-<p>那么什么是静态博客，什么是动态博客呢？</p>
-<h2 id="1-1-静态博客"><a href="#1-1-静态博客" class="headerlink" title="1.1.静态博客"></a>1.1.静态博客</h2><p>HTML(超文本标记语言)格式的网页通常被称为静态网页，是直接渲染生成HTML标准的文件呈现给客户端，不需要数据库的支撑就可完成。静态博客中可以包含文本、声音、图像、FLASH动画等。</p>
-<h2 id="1-2-动态博客"><a href="#1-2-动态博客" class="headerlink" title="1.2.动态博客"></a>1.2.动态博客</h2><p>所谓动态，是指网页渲染是通过动态调用再解析而成，生产的网页不是HTML文件，需要服务器端伪装成HTML文件呈现给客户端。“动”不是指网页中的页面元素或者特效在动，而是指与后台数据库进行交互，进行数据传递。比如用户注册登录、留言等功能。</p>
-<hr>
-<h1 id="2-静态博客的优势"><a href="#2-静态博客的优势" class="headerlink" title="2.静态博客的优势"></a>2.静态博客的优势</h1><ul>
-<li>部署简单，降低建站成本</li>
-<li>所占资源相对少</li>
-<li>访问速度更快</li>
-<li>轻量安全性更高</li>
-</ul>
-<p>我的个人博客就是依靠Hexo框架进行搭建的。Hexo是一款基于Node.js的静态博客框架，所需依赖少，搭建简单，生成的静态网页也可以托管到远端服务器上。</p>
-<hr>
-<h1 id="3-参考"><a href="#3-参考" class="headerlink" title="3.参考"></a>3.参考</h1><p><a href="https://www.imydl.com/wzjs/9789.html" target="_blank" rel="noopener">说说 Hexo 静态博客框架</a></p>
-<p>每天坚持一点点！</p>
-]]></content>
-      <categories>
-        <category>入门系列</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用PicGo小工具白嫖Gitee(码云)作为博客图床</title>
-    <url>/2020/03/25/%E4%BD%BF%E7%94%A8PicGo%E5%B0%8F%E5%B7%A5%E5%85%B7%E7%99%BD%E5%AB%96Gitee-%E7%A0%81%E4%BA%91-%E4%BD%9C%E4%B8%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_008.jpg" alt=""></p>
-<p>很多小伙伴在写博客的过程中都遇到一个普遍的问题，那就是如何引用和存放图片。博客图片存放于本地占内存，存放于GitHub上访问速度太慢，好在国内有许多可以设置为图床的地方，比如微博啊、码云啊、七牛云啊。本文所讲的正是将Gitee码云作为个人博客的免费图床。</p>
-<a id="more"></a>
-
-<hr>
-<h1 id="创建码云图床库"><a href="#创建码云图床库" class="headerlink" title="创建码云图床库"></a>创建码云图床库</h1><p>在这之前先注册好一个码云账号。</p>
-<p>1.新建仓库</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_03-58-49.png" alt=""></p>
-<p>2.设置仓库</p>
-<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-06.png" style="zoom:80%;" />
-
-<p>注意：仓库要设为公开，勾选使用README文件初始化这个仓库</p>
-<hr>
-<h1 id="小工具PicGo配置"><a href="#小工具PicGo配置" class="headerlink" title="小工具PicGo配置"></a>小工具PicGo配置</h1><p>因为每次上传单张图片真的很麻烦，所以用到了Picgo这个极大提高生产力的图片上传和管理的工具，一次性部署爽歪歪。</p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://github.com/Molunerfinn/PicGo/realeses" target="_blank" rel="noopener">下载地址</a></p>
-<p>安装后主界面</p>
-<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-19-10.png" style="zoom:80%;" />
-
-<hr>
-<h2 id="图床设置"><a href="#图床设置" class="headerlink" title="图床设置"></a>图床设置</h2><p>点击插件设置，输入<code>gitee</code>，安装<code>gitee-uploader</code>插件。</p>
-<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-21-11.png" style="zoom:80%;" />
-
-<p>点击图床设置，选中<code>gitee</code>，我们开始配置插件。</p>
-<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-26-09.png" style="zoom:80%;" />
-
-<ul>
-<li>repo: 用户名/仓库名称，如我的<code>Pavlova-Liu/images_store</code></li>
-<li>branch: 分支，这里写上<code>master</code></li>
-<li>token: 私人令牌</li>
-<li>path: 路径，一般写上<code>img</code></li>
-<li>customPath和customURL都不用填</li>
-</ul>
-<hr>
-<h2 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h2><p>登录进入码云，点击头像，进入设置</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-26.png" alt=""></p>
-<p>找到私人令牌，并点击生成新令牌，把projects这一项勾选上，其他不用勾，然后点击提交。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-01-24.png" alt=""></p>
-<p>验证密码后就已经生成了token，复制到PicGo的配置里去。注意此令牌只显示一次，搞丢了又要重新生成。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-33-59.png" alt=""></p>
-<p>保存设置，设置gitee为默认图床。</p>
-<hr>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>接下来直接往PicGo里拖动图片就可以完成图片上传，需要引用图片时，赋值PicGo生成的图片链接即可。后续的图片操作只需在PicGo里执行就行。</p>
-<p>超级方便的有木有！</p>
-]]></content>
-      <categories>
-        <category>妙用好招</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客免密部署到GitHub的小操作</title>
-    <url>/2020/04/05/%E5%8D%9A%E5%AE%A2%E5%85%8D%E5%AF%86%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E7%9A%84%E5%B0%8F%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_009.jpg" alt=""></p>
-<p>每次写完博客，提交、部署到GitHub上的时候，会要求输入账户名和密码，我们可以通过设置SSH密钥以实现免密部署，来提高生产效率。</p>
-<a id="more"></a>
-
-<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>由于每次部署时GitHub都要确定用户是否为安全用户，所以要求输入账户名和密码。而SSH就保证了这样的安全。</p>
-<p>SSH是一种网络协议，用于计算机之间的加密登录。一般生成的是<code>id_rsa</code>和<code>id_rsa.pub</code>，一个私钥和一个公钥。</p>
-<p>原理就是将公钥储存到远端主机，私钥储存在本地，登录时远程主机会向用户发送一段随机字符串，用户用自己的私钥加密后，再发回来。远程主机用事先储存的公钥进行解密，如果成功，就证明用户是可信的，直接允许登录shell，不再要求密码。</p>
-<hr>
-<h1 id="检查现有的SSH密钥"><a href="#检查现有的SSH密钥" class="headerlink" title="检查现有的SSH密钥"></a>检查现有的SSH密钥</h1><p>打开Git Bash。输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
-
-<p>查看是否存在SSH密钥，若没有，则生成一个新的SSH密钥。</p>
-<hr>
-<h1 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"GitHub邮箱地址"</span></span><br></pre></td></tr></table></figure>
-
-<p>为了方便，回车三连。</p>
-<p>根据文件的生成路径，找到.ssh文件夹，打开目录下的<code>id_rsa.pub</code>，复制里面的所有内容。</p>
-<hr>
-<h1 id="将SSH密钥添加到GitHub账户"><a href="#将SSH密钥添加到GitHub账户" class="headerlink" title="将SSH密钥添加到GitHub账户"></a>将SSH密钥添加到GitHub账户</h1><p>右上角点击个人资料照片，点击<code>Setting</code></p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-04-05_14-45-24.png" alt=""></p>
-<p>在用户设置边栏找到<code>SSH and GPG keys</code>，点击<code>New SSH key</code>。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-04-05_14-46-00.png" alt=""></p>
-<p><code>Title</code>字段可自行命名一个描述性标签,并在<code>Key</code>中粘贴刚刚所复制内容，点击点击<code>Add SSH key</code>。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-04-05_14-46-19.png" alt=""></p>
-<hr>
-<h1 id="测试SSH密钥的连接"><a href="#测试SSH密钥的连接" class="headerlink" title="测试SSH密钥的连接"></a>测试SSH密钥的连接</h1><p>回到Git bash，输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p>首次输入可能会看到警告，键入<code>yes</code>即可。</p>
-<p>成功会返回验证消息：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Hi username! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="修改站点配置文件-config-yml"><a href="#修改站点配置文件-config-yml" class="headerlink" title="修改站点配置文件_config.yml"></a>修改站点配置文件_config.yml</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:xxxx&#x2F;xxxx.github.io.git</span><br><span class="line">  #格式必须是上述格式</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>这样SSH密钥便设置成功啦！</p>
-<hr>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh" target="_blank" rel="noopener">生成SSH密钥</a></p>
-]]></content>
-      <categories>
-        <category>妙用好招</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决npm警告、错误的方法记录</title>
     <url>/2020/03/26/%E8%A7%A3%E5%86%B3npm%E7%9B%B8%E5%85%B3%E8%AD%A6%E5%91%8A%E3%80%81%E9%94%99%E8%AF%AF%E7%9A%84%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_013.jpg" alt=""></p>
@@ -324,184 +502,6 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>妙用Gitee(码云)提升GitHub下载速度</title>
-    <url>/2020/03/25/%E5%A6%99%E7%94%A8Gitee-%E7%A0%81%E4%BA%91-%E6%8F%90%E5%8D%87GitHub%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_007.jpg" alt=""></p>
-<p>众所周知，GitHub是一个大宝库，藏着许多开源的优秀的项目，然而一个问题是下载速度不堪入目，相信有经验的小伙伴都有那等待克隆下载的痛苦……</p>
-<p>本文就来提供一个妙招，教你再也不用苦等程序的下载了。</p>
-<a id="more"></a>
-
-<hr>
-<h1 id="码云Gitee"><a href="#码云Gitee" class="headerlink" title="码云Gitee"></a>码云Gitee</h1><p>码云(Gitee)平台相当于是国内的GitHub，通过码云的转接，即可实现GitHub上项目的下载加速。</p>
-<p>首先是要确保有一个码云的账户。</p>
-<p>点击加号，选择“从<code>GitHub/GitLab</code>导入仓库”</p>
-<p>填写想导入的仓库的地址，点击导入</p>
-<p>一般要等一会，码云就会克隆出一份同GitHub上一模一样的项目。</p>
-<p>复制码云提供的项目地址，会发现克隆速度已经很快了，很快就能下载完。</p>
-<hr>
-<h1 id="重新关联GitHub"><a href="#重新关联GitHub" class="headerlink" title="重新关联GitHub"></a>重新关联GitHub</h1><p>我们通过码云克隆到本地的项目是关联的码云Gitee的地址，所以还需要我们将本地项目重新关联到GitHub上。</p>
-<p>找到本地仓库目录下的<code>.git</code>文件夹</p>
-<p>打开<code>.git</code>文件夹下的<code>_config</code>配置文件</p>
-<p>将码云Gitee提供的项目地址换回原来的GitHub项目地址</p>
-<hr>
-]]></content>
-      <categories>
-        <category>妙用好招</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>是时候给你的Windows打造一个漂亮的终端了</title>
-    <url>/2020/03/26/%E6%98%AF%E6%97%B6%E5%80%99%E7%BB%99%E4%BD%A0%E7%9A%84Windows%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E6%BC%82%E4%BA%AE%E7%9A%84%E7%BB%88%E7%AB%AF%E4%BA%86/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_001.jpg" alt=""></p>
-<p>相比于Mac上那漂亮炫酷的终端，Windows上无论是cmd还是PowerShell都显得有些寒酸了，难道Windows就没有好用且漂亮的终端吗？</p>
-<p>最近，无意间发现了个好东西，当当当，那就是<code>Fluent Terminal</code>，一款基于微软<code>Fluent Design</code>设计理念的终端模拟器，界面精美，操作简单，还在等什么，是时候打造一个漂亮的终端了!</p>
-<a id="more"></a>
-
-<hr>
-<p>先附上官方截图</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/terminal.jpg" alt=""></p>
-<hr>
-<h1 id="下载Fluent-Terminal"><a href="#下载Fluent-Terminal" class="headerlink" title="下载Fluent Terminal"></a>下载Fluent Terminal</h1><p><a href="https://github.com/felixse/FluentTerminal/releases" target="_blank" rel="noopener">下载地址</a></p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-26_16-52-34.png" alt=""></p>
-<p>下载并解压缩，完成后按照官方说明，右键单击<code>Install.ps1</code>，然后选择“使用Powershell运行”。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-26_16-55-15.png" alt=""></p>
-<hr>
-<h1 id="安装oh-my-posh"><a href="#安装oh-my-posh" class="headerlink" title="安装oh-my-posh"></a>安装oh-my-posh</h1><p><code>oh-my-posh</code>类似于PowerShell版本的<code>oh-my-zsh</code>，它是一个PowerShell增强程序。</p>
-<p>1.使用 <code>PowerShell Gallery</code>来安装 <code>oh-my-posh</code>。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Install-Module posh-git -Scope CurrentUser</span><br><span class="line">Install-Module oh-my-posh -Scope CurrentUser</span><br></pre></td></tr></table></figure>
-
-
-
-<p>2.创建PowerShell的配置文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (!(Test-Path -Path <span class="variable">$PROFILE</span>)) &#123;New-Item -Type File -Path <span class="variable">$PROFILE</span> -Force&#125;</span><br><span class="line">notepad <span class="variable">$PROFILE</span></span><br></pre></td></tr></table></figure>
-
-<p>在配置文件中敲入几行代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Import-Module posh-git</span><br><span class="line">Import-Module oh-my-posh</span><br><span class="line">Set-Theme Paradox #主题</span><br></pre></td></tr></table></figure>
-
-<p>这里的主题根据个人喜好来自行选择。</p>
-<hr>
-<h1 id="下载字体"><a href="#下载字体" class="headerlink" title="下载字体"></a>下载字体</h1><p>有兴趣的小伙伴还可以去下载字体，这里提供一个我正在使用的<a href="https://github.com/powerline/fonts" target="_blank" rel="noopener">字体库</a>。下载完成后同样右键单击<code>Install.ps1</code>，然后选择“使用Powershell运行”。</p>
-<hr>
-<h1 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h1><p>现了刚刚下好的字体，同时你可以设置自己喜欢的主题颜色，调整大小等等。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-26_17-06-02.png" alt=""></p>
-<p>重启打开之后就可以生效了，是不是看起来还不错！</p>
-<hr>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.tickmao.com/2019/08/08/termial-windows-tickmao/" target="_blank" rel="noopener">https://www.tickmao.com/2019/08/08/termial-windows-tickmao/</a></p>
-]]></content>
-      <categories>
-        <category>妙用好招</category>
-      </categories>
-      <tags>
-        <tag>Terminal</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>简单几步将Hexo部署到GitHub Pages上</title>
-    <url>/2020/03/20/%E7%AE%80%E5%8D%95%E5%87%A0%E6%AD%A5%E5%B0%86Hexo%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Pages%E4%B8%8A/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_005.jpg" alt=""></p>
-<p>上篇<a href="http://pavlova-liu.github.io/2020/03/19/%E4%BB%8E%E5%AE%89%E8%A3%85Hexo%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">从安装Hexo开始搭建个人博客</a>说了如何安装Hexo,但是博客不能一直放在本地里用，我们需要将其部署到远端。有个免费的方法是将其部署到GitHub Pages上，现在只要简单几步，我们一鼓作气将其搞定。</p>
-<a id="more"></a>
-
-<hr>
-<h1 id="1-注册GitHub账户"><a href="#1-注册GitHub账户" class="headerlink" title="1.注册GitHub账户"></a>1.注册GitHub账户</h1><blockquote>
-<p>GitHub Pages是一个静态站点托管服务，可直接从GitHub上的存储库获取HTML，CSS和JavaScript文件，还可以选择在构建过程中运行这些文件并发布网站。</p>
-</blockquote>
-<p>GitHub是一个宝库，愣着的小伙伴赶紧去注册呀!</p>
-<hr>
-<h1 id="2-创建一个存储库"><a href="#2-创建一个存储库" class="headerlink" title="2.创建一个存储库"></a>2.创建一个存储库</h1><p>点击创建</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/20200320200253.png" alt=""></p>
-<p>创建一个名为<strong>username .github.io的存储库</strong>，其中username是你在GitHub上的用户名。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/tempsnip.png" alt=""></p>
-<hr>
-<h1 id="3-部署"><a href="#3-部署" class="headerlink" title="3. 部署"></a>3. 部署</h1><h2 id="3-1-安装插件"><a href="#3-1-安装插件" class="headerlink" title="3.1.安装插件"></a>3.1.安装插件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="3-2-修改站点配置文件"><a href="#3-2-修改站点配置文件" class="headerlink" title="3.2.修改站点配置文件"></a>3.2.修改站点配置文件</h2><p>打开站点下的<code>_config,yml</code>文件，添加<code>deploy</code>信息</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repo: https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;username.github.io</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
-
-<p>注意将username改为你的GithHub用户名。</p>
-<h2 id="3-3-部署"><a href="#3-3-部署" class="headerlink" title="3.3.部署"></a>3.3.部署</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo cl     &#x2F;&#x2F;清理缓存</span><br><span class="line">hexo g      &#x2F;&#x2F;生成静态文件</span><br><span class="line">hexo d      &#x2F;&#x2F;部署网站到创建的仓库</span><br></pre></td></tr></table></figure>
-
-<p>这样几步下来就可以部署成功了，以后可以直接凭过程中设置的网址访问你的个人网站。</p>
-<hr>
-<h1 id="4-最后"><a href="#4-最后" class="headerlink" title="4.最后"></a>4.最后</h1><p>部署成功后，就可以使用Github提供的那个地址来访问博客了。</p>
-<p>成功部署的可以分享给其他小伙伴们，觉得丑的再看看下一篇如何更换主题。</p>
-<h1 id="5-参考"><a href="#5-参考" class="headerlink" title="5.参考"></a>5.参考</h1><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">文档</a></p>
-<p><a href="https://help.github.com/categories/github-pages-basics/" target="_blank" rel="noopener">GitHub页面</a></p>
-]]></content>
-      <categories>
-        <category>实战记录</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>详解如何在自己电脑上配置freeglut编程环境并跑通</title>
-    <url>/2020/04/03/%E8%AF%A6%E8%A7%A3%E5%A6%82%E4%BD%95%E5%9C%A8%E8%87%AA%E5%B7%B1%E7%94%B5%E8%84%91%E4%B8%8A%E9%85%8D%E7%BD%AEfreeglut%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E5%B9%B6%E8%B7%91%E9%80%9A/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_010.jpg" alt=""></p>
-<p>freeglut是glut库的开源替代方案，想要利用freeglut来辅助完成OpenGL的编程，首先，要在自己电脑上配置好其编程环境。以下为我的环境配置详解。</p>
-<a id="more"></a>
-
-
-
-<h1 id="freeglut的下载"><a href="#freeglut的下载" class="headerlink" title="freeglut的下载"></a>freeglut的下载</h1><p>这里有两种办法，一种是下载源码自己编译，一种是直接下压缩包。</p>
-<ol>
-<li><p><a href="http://freeglut.sourceforge.net/" target="_blank" rel="noopener">源码下载地址</a></p>
-</li>
-<li><p>如果是以VS为编程环境的，可直接下载链接中的MSVC包</p>
-<p><a href="https://www.transmissionzero.co.uk/files/software/development/GLUT/freeglut-MSVC.zip" target="_blank" rel="noopener">MSVC包下载地址</a></p>
-</li>
-</ol>
-<hr>
-<h1 id="freeglut的配置"><a href="#freeglut的配置" class="headerlink" title="freeglut的配置"></a>freeglut的配置</h1><p>将文件拷贝到相应目录下，根据自己想要编32位还是64位版本的程序来选择对应的路径。</p>
-<h2 id="h文件"><a href="#h文件" class="headerlink" title=".h文件"></a>.h文件</h2><p>将<code>\include\GL</code>目录下的所有<code>.h</code>文件复制到 <code>Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\GL</code>目录下;</p>
-<h2 id="lib文件"><a href="#lib文件" class="headerlink" title=".lib文件"></a>.lib文件</h2><ul>
-<li><p>32位版本</p>
-<p>将<code>\lib\x86\</code>中的<code>freeglut.lib</code>文件复制到<code>Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28610\lib</code>目录下;</p>
-</li>
-<li><p>64位版本</p>
-<p>将<code>\lib\x64</code>中的<code>freeglut.lib</code>文件复制到<code>Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28610\lib\x64</code>目录下;</p>
-</li>
-</ul>
-<h2 id="dll文件"><a href="#dll文件" class="headerlink" title=".dll文件"></a>.dll文件</h2><ul>
-<li><p>32位版本</p>
-<p>将<code>\bin\x86\freeglut.dll</code>文件复制<code>c:\Windows\SysWOW64</code>目录下;</p>
-</li>
-<li><p>64位版本</p>
-<p>将<code>\bin\x64\</code>中的<code>freeglut.dll</code>文件复制到<code>c:\Windows\System32</code>目录下;</p>
-</li>
-</ul>
-<hr>
-<h1 id="测试安装是否成功"><a href="#测试安装是否成功" class="headerlink" title="测试安装是否成功"></a>测试安装是否成功</h1><p>创建一个空白的console工程，创建一个C++文件，拷入代码运行。</p>
-<p>提供一个简单的glut程序：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;GL/glut.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	glutInit(&amp;argc, argv);</span><br><span class="line">	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);</span><br><span class="line">	glutInitWindowSize(<span class="number">300</span>, <span class="number">300</span>);</span><br><span class="line">	glutInitWindowPosition(<span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">	glutCreateWindow(<span class="string">"testgl"</span>);</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">char</span>* version = (<span class="keyword">const</span> <span class="keyword">char</span>*)glGetString(GL_VERSION);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"OpenGL 版本: %s\n"</span>, version);</span><br><span class="line">	glutMainLoop();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>若能运行成功，会显示OpenGL的版本。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/1.png" alt=""></p>
-<hr>
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在第一次运行VS跑程序时，报错<code>LINK: fatal error LNK1104 无法打开文件&quot;freeglut.lib&quot;</code>，检查了lib、dll文件的路径后并没发现问题，上网查询后发现要进行预处理。</p>
-<p>解决办法：</p>
-<p>【属性】-&gt;【C/C++】-&gt;【预处理器】-&gt;【预处理器定义】，点击【编辑】新增一个<code>NDEBUG</code>。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/2.png" alt=""></p>
-<hr>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://cloud.tencent.com/developer/article/1403418" target="_blank" rel="noopener">FreeGlut配置简介</a></p>
-]]></content>
-      <categories>
-        <category>实战记录</category>
-      </categories>
-      <tags>
-        <tag>OpenGL</tag>
       </tags>
   </entry>
 </search>
