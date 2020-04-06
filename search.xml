@@ -31,6 +31,39 @@
       </tags>
   </entry>
   <entry>
+    <title>你可能没仔细了解过什么是静态博客</title>
+    <url>/2020/03/19/%E4%BD%A0%E5%8F%AF%E8%83%BD%E6%B2%A1%E4%BB%94%E7%BB%86%E4%BA%86%E8%A7%A3%E8%BF%87%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_006.jpg"  />
+
+<p>在我们期待去搭建个人博客之前，还是先了解下所谓的静态博客。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="1-何为静态博客，何为动态博客"><a href="#1-何为静态博客，何为动态博客" class="headerlink" title="1.何为静态博客，何为动态博客"></a>1.何为静态博客，何为动态博客</h1><p>首先，要知道一个网站最基础的部分就是网页，而与其从网页开始写起，不如利用大牛们已经做好的博客生成器来解决网页编写的问题。</p>
+<p>如今有很多好用热门的博客生成器，一般来说，博客生成器分为动态和静态两种。典型的静态博客生成器有：<code>Hexo、Jekyll、Hugo</code>等，典型的动态博客生成器有：<code>WordPress、FarBox、Ghost</code>等。</p>
+<p>那么什么是静态博客，什么是动态博客呢？</p>
+<h2 id="1-1-静态博客"><a href="#1-1-静态博客" class="headerlink" title="1.1.静态博客"></a>1.1.静态博客</h2><p>HTML(超文本标记语言)格式的网页通常被称为静态网页，是直接渲染生成HTML标准的文件呈现给客户端，不需要数据库的支撑就可完成。静态博客中可以包含文本、声音、图像、FLASH动画等。</p>
+<h2 id="1-2-动态博客"><a href="#1-2-动态博客" class="headerlink" title="1.2.动态博客"></a>1.2.动态博客</h2><p>所谓动态，是指网页渲染是通过动态调用再解析而成，生产的网页不是HTML文件，需要服务器端伪装成HTML文件呈现给客户端。“动”不是指网页中的页面元素或者特效在动，而是指与后台数据库进行交互，进行数据传递。比如用户注册登录、留言等功能。</p>
+<hr>
+<h1 id="2-静态博客的优势"><a href="#2-静态博客的优势" class="headerlink" title="2.静态博客的优势"></a>2.静态博客的优势</h1><ul>
+<li>部署简单，降低建站成本</li>
+<li>所占资源相对少</li>
+<li>访问速度更快</li>
+<li>轻量安全性更高</li>
+</ul>
+<p>我的个人博客就是依靠Hexo框架进行搭建的。Hexo是一款基于Node.js的静态博客框架，所需依赖少，搭建简单，生成的静态网页也可以托管到远端服务器上。</p>
+<hr>
+<h1 id="3-参考"><a href="#3-参考" class="headerlink" title="3.参考"></a>3.参考</h1><p><a href="https://www.imydl.com/wzjs/9789.html" target="_blank" rel="noopener">说说 Hexo 静态博客框架</a></p>
+<p>每天坚持一点点！</p>
+]]></content>
+      <categories>
+        <category>入门系列</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>以NexT主题为例讲讲如何更换Hexo博客主题</title>
     <url>/2020/03/21/%E4%BB%A5NexT%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B%E8%AE%B2%E8%AE%B2%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/</url>
     <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_004.jpg" alt=""></p>
@@ -65,60 +98,6 @@
 ]]></content>
       <categories>
         <category>实战记录</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用PicGo小工具白嫖Gitee(码云)作为博客图床</title>
-    <url>/2020/03/25/%E4%BD%BF%E7%94%A8PicGo%E5%B0%8F%E5%B7%A5%E5%85%B7%E7%99%BD%E5%AB%96Gitee-%E7%A0%81%E4%BA%91-%E4%BD%9C%E4%B8%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_008.jpg" alt=""></p>
-<p>很多小伙伴在写博客的过程中都遇到一个普遍的问题，那就是如何引用和存放图片。博客图片存放于本地占内存，存放于GitHub上访问速度太慢，好在国内有许多可以设置为图床的地方，比如微博啊、码云啊、七牛云啊。本文所讲的正是将Gitee码云作为个人博客的免费图床。</p>
-<a id="more"></a>
-
-<hr>
-<h1 id="创建码云图床库"><a href="#创建码云图床库" class="headerlink" title="创建码云图床库"></a>创建码云图床库</h1><p>在这之前先注册好一个码云账号。</p>
-<p>1.新建仓库</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_03-58-49.png" alt=""></p>
-<p>2.设置仓库</p>
-<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-06.png" style="zoom:80%;" />
-
-<p>注意：仓库要设为公开，勾选使用README文件初始化这个仓库</p>
-<hr>
-<h1 id="小工具PicGo配置"><a href="#小工具PicGo配置" class="headerlink" title="小工具PicGo配置"></a>小工具PicGo配置</h1><p>因为每次上传单张图片真的很麻烦，所以用到了Picgo这个极大提高生产力的图片上传和管理的工具，一次性部署爽歪歪。</p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://github.com/Molunerfinn/PicGo/realeses" target="_blank" rel="noopener">下载地址</a></p>
-<p>安装后主界面</p>
-<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-19-10.png" style="zoom:80%;" />
-
-<hr>
-<h2 id="图床设置"><a href="#图床设置" class="headerlink" title="图床设置"></a>图床设置</h2><p>点击插件设置，输入<code>gitee</code>，安装<code>gitee-uploader</code>插件。</p>
-<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-21-11.png" style="zoom:80%;" />
-
-<p>点击图床设置，选中<code>gitee</code>，我们开始配置插件。</p>
-<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-26-09.png" style="zoom:80%;" />
-
-<ul>
-<li>repo: 用户名/仓库名称，如我的<code>Pavlova-Liu/images_store</code></li>
-<li>branch: 分支，这里写上<code>master</code></li>
-<li>token: 私人令牌</li>
-<li>path: 路径，一般写上<code>img</code></li>
-<li>customPath和customURL都不用填</li>
-</ul>
-<hr>
-<h2 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h2><p>登录进入码云，点击头像，进入设置</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-26.png" alt=""></p>
-<p>找到私人令牌，并点击生成新令牌，把projects这一项勾选上，其他不用勾，然后点击提交。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-01-24.png" alt=""></p>
-<p>验证密码后就已经生成了token，复制到PicGo的配置里去。注意此令牌只显示一次，搞丢了又要重新生成。</p>
-<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-33-59.png" alt=""></p>
-<p>保存设置，设置gitee为默认图床。</p>
-<hr>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>接下来直接往PicGo里拖动图片就可以完成图片上传，需要引用图片时，赋值PicGo生成的图片链接即可。后续的图片操作只需在PicGo里执行就行。</p>
-<p>超级方便的有木有！</p>
-]]></content>
-      <categories>
-        <category>妙用好招</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -207,65 +186,57 @@
       </tags>
   </entry>
   <entry>
-    <title>你可能没仔细了解过什么是静态博客</title>
-    <url>/2020/03/19/%E4%BD%A0%E5%8F%AF%E8%83%BD%E6%B2%A1%E4%BB%94%E7%BB%86%E4%BA%86%E8%A7%A3%E8%BF%87%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_006.jpg"  />
-
-<p>在我们期待去搭建个人博客之前，还是先了解下所谓的静态博客。</p>
+    <title>使用PicGo小工具白嫖Gitee(码云)作为博客图床</title>
+    <url>/2020/03/25/%E4%BD%BF%E7%94%A8PicGo%E5%B0%8F%E5%B7%A5%E5%85%B7%E7%99%BD%E5%AB%96Gitee-%E7%A0%81%E4%BA%91-%E4%BD%9C%E4%B8%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_008.jpg" alt=""></p>
+<p>很多小伙伴在写博客的过程中都遇到一个普遍的问题，那就是如何引用和存放图片。博客图片存放于本地占内存，存放于GitHub上访问速度太慢，好在国内有许多可以设置为图床的地方，比如微博啊、码云啊、七牛云啊。本文所讲的正是将Gitee码云作为个人博客的免费图床。</p>
 <a id="more"></a>
 
 <hr>
-<h1 id="1-何为静态博客，何为动态博客"><a href="#1-何为静态博客，何为动态博客" class="headerlink" title="1.何为静态博客，何为动态博客"></a>1.何为静态博客，何为动态博客</h1><p>首先，要知道一个网站最基础的部分就是网页，而与其从网页开始写起，不如利用大牛们已经做好的博客生成器来解决网页编写的问题。</p>
-<p>如今有很多好用热门的博客生成器，一般来说，博客生成器分为动态和静态两种。典型的静态博客生成器有：<code>Hexo、Jekyll、Hugo</code>等，典型的动态博客生成器有：<code>WordPress、FarBox、Ghost</code>等。</p>
-<p>那么什么是静态博客，什么是动态博客呢？</p>
-<h2 id="1-1-静态博客"><a href="#1-1-静态博客" class="headerlink" title="1.1.静态博客"></a>1.1.静态博客</h2><p>HTML(超文本标记语言)格式的网页通常被称为静态网页，是直接渲染生成HTML标准的文件呈现给客户端，不需要数据库的支撑就可完成。静态博客中可以包含文本、声音、图像、FLASH动画等。</p>
-<h2 id="1-2-动态博客"><a href="#1-2-动态博客" class="headerlink" title="1.2.动态博客"></a>1.2.动态博客</h2><p>所谓动态，是指网页渲染是通过动态调用再解析而成，生产的网页不是HTML文件，需要服务器端伪装成HTML文件呈现给客户端。“动”不是指网页中的页面元素或者特效在动，而是指与后台数据库进行交互，进行数据传递。比如用户注册登录、留言等功能。</p>
+<h1 id="创建码云图床库"><a href="#创建码云图床库" class="headerlink" title="创建码云图床库"></a>创建码云图床库</h1><p>在这之前先注册好一个码云账号。</p>
+<p>1.新建仓库</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_03-58-49.png" alt=""></p>
+<p>2.设置仓库</p>
+<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-06.png" style="zoom:80%;" />
+
+<p>注意：仓库要设为公开，勾选使用README文件初始化这个仓库</p>
 <hr>
-<h1 id="2-静态博客的优势"><a href="#2-静态博客的优势" class="headerlink" title="2.静态博客的优势"></a>2.静态博客的优势</h1><ul>
-<li>部署简单，降低建站成本</li>
-<li>所占资源相对少</li>
-<li>访问速度更快</li>
-<li>轻量安全性更高</li>
+<h1 id="小工具PicGo配置"><a href="#小工具PicGo配置" class="headerlink" title="小工具PicGo配置"></a>小工具PicGo配置</h1><p>因为每次上传单张图片真的很麻烦，所以用到了Picgo这个极大提高生产力的图片上传和管理的工具，一次性部署爽歪歪。</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://github.com/Molunerfinn/PicGo/realeses" target="_blank" rel="noopener">下载地址</a></p>
+<p>安装后主界面</p>
+<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-19-10.png" style="zoom:80%;" />
+
+<hr>
+<h2 id="图床设置"><a href="#图床设置" class="headerlink" title="图床设置"></a>图床设置</h2><p>点击插件设置，输入<code>gitee</code>，安装<code>gitee-uploader</code>插件。</p>
+<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-21-11.png" style="zoom:80%;" />
+
+<p>点击图床设置，选中<code>gitee</code>，我们开始配置插件。</p>
+<img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-26-09.png" style="zoom:80%;" />
+
+<ul>
+<li>repo: 用户名/仓库名称，如我的<code>Pavlova-Liu/images_store</code></li>
+<li>branch: 分支，这里写上<code>master</code></li>
+<li>token: 私人令牌</li>
+<li>path: 路径，一般写上<code>img</code></li>
+<li>customPath和customURL都不用填</li>
 </ul>
-<p>我的个人博客就是依靠Hexo框架进行搭建的。Hexo是一款基于Node.js的静态博客框架，所需依赖少，搭建简单，生成的静态网页也可以托管到远端服务器上。</p>
 <hr>
-<h1 id="3-参考"><a href="#3-参考" class="headerlink" title="3.参考"></a>3.参考</h1><p><a href="https://www.imydl.com/wzjs/9789.html" target="_blank" rel="noopener">说说 Hexo 静态博客框架</a></p>
-<p>每天坚持一点点！</p>
-]]></content>
-      <categories>
-        <category>入门系列</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>妙用Gitee(码云)提升GitHub下载速度</title>
-    <url>/2020/03/25/%E5%A6%99%E7%94%A8Gitee-%E7%A0%81%E4%BA%91-%E6%8F%90%E5%8D%87GitHub%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_007.jpg" alt=""></p>
-<p>众所周知，GitHub是一个大宝库，藏着许多开源的优秀的项目，然而一个问题是下载速度不堪入目，相信有经验的小伙伴都有那等待克隆下载的痛苦……</p>
-<p>本文就来提供一个妙招，教你再也不用苦等程序的下载了。</p>
-<a id="more"></a>
-
+<h2 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h2><p>登录进入码云，点击头像，进入设置</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-26.png" alt=""></p>
+<p>找到私人令牌，并点击生成新令牌，把projects这一项勾选上，其他不用勾，然后点击提交。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-01-24.png" alt=""></p>
+<p>验证密码后就已经生成了token，复制到PicGo的配置里去。注意此令牌只显示一次，搞丢了又要重新生成。</p>
+<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/Snipaste_2020-03-25_04-33-59.png" alt=""></p>
+<p>保存设置，设置gitee为默认图床。</p>
 <hr>
-<h1 id="码云Gitee"><a href="#码云Gitee" class="headerlink" title="码云Gitee"></a>码云Gitee</h1><p>码云(Gitee)平台相当于是国内的GitHub，通过码云的转接，即可实现GitHub上项目的下载加速。</p>
-<p>首先是要确保有一个码云的账户。</p>
-<p>点击加号，选择“从<code>GitHub/GitLab</code>导入仓库”</p>
-<p>填写想导入的仓库的地址，点击导入</p>
-<p>一般要等一会，码云就会克隆出一份同GitHub上一模一样的项目。</p>
-<p>复制码云提供的项目地址，会发现克隆速度已经很快了，很快就能下载完。</p>
-<hr>
-<h1 id="重新关联GitHub"><a href="#重新关联GitHub" class="headerlink" title="重新关联GitHub"></a>重新关联GitHub</h1><p>我们通过码云克隆到本地的项目是关联的码云Gitee的地址，所以还需要我们将本地项目重新关联到GitHub上。</p>
-<p>找到本地仓库目录下的<code>.git</code>文件夹</p>
-<p>打开<code>.git</code>文件夹下的<code>_config</code>配置文件</p>
-<p>将码云Gitee提供的项目地址换回原来的GitHub项目地址</p>
-<hr>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>接下来直接往PicGo里拖动图片就可以完成图片上传，需要引用图片时，赋值PicGo生成的图片链接即可。后续的图片操作只需在PicGo里执行就行。</p>
+<p>超级方便的有木有！</p>
 ]]></content>
       <categories>
         <category>妙用好招</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -315,6 +286,35 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>妙用Gitee(码云)提升GitHub下载速度</title>
+    <url>/2020/03/25/%E5%A6%99%E7%94%A8Gitee-%E7%A0%81%E4%BA%91-%E6%8F%90%E5%8D%87GitHub%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/Pavlova-Liu/images_store/raw/master/img/pic_007.jpg" alt=""></p>
+<p>众所周知，GitHub是一个大宝库，藏着许多开源的优秀的项目，然而一个问题是下载速度不堪入目，相信有经验的小伙伴都有那等待克隆下载的痛苦……</p>
+<p>本文就来提供一个妙招，教你再也不用苦等程序的下载了。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="码云Gitee"><a href="#码云Gitee" class="headerlink" title="码云Gitee"></a>码云Gitee</h1><p>码云(Gitee)平台相当于是国内的GitHub，通过码云的转接，即可实现GitHub上项目的下载加速。</p>
+<p>首先是要确保有一个码云的账户。</p>
+<p>点击加号，选择“从<code>GitHub/GitLab</code>导入仓库”</p>
+<p>填写想导入的仓库的地址，点击导入</p>
+<p>一般要等一会，码云就会克隆出一份同GitHub上一模一样的项目。</p>
+<p>复制码云提供的项目地址，会发现克隆速度已经很快了，很快就能下载完。</p>
+<hr>
+<h1 id="重新关联GitHub"><a href="#重新关联GitHub" class="headerlink" title="重新关联GitHub"></a>重新关联GitHub</h1><p>我们通过码云克隆到本地的项目是关联的码云Gitee的地址，所以还需要我们将本地项目重新关联到GitHub上。</p>
+<p>找到本地仓库目录下的<code>.git</code>文件夹</p>
+<p>打开<code>.git</code>文件夹下的<code>_config</code>配置文件</p>
+<p>将码云Gitee提供的项目地址换回原来的GitHub项目地址</p>
+<hr>
+]]></content>
+      <categories>
+        <category>妙用好招</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
