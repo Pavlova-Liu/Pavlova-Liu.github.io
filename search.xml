@@ -92,87 +92,53 @@
       </tags>
   </entry>
   <entry>
-    <title>你可能没仔细了解过什么是静态博客</title>
-    <url>/2020/03/19/%E4%BD%A0%E5%8F%AF%E8%83%BD%E6%B2%A1%E4%BB%94%E7%BB%86%E4%BA%86%E8%A7%A3%E8%BF%87%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_006.jpg"  />
-
-<p>在我们期待去搭建个人博客之前，还是先了解下所谓的静态博客。</p>
+    <title>使用PicGo小工具白嫖Gitee(码云)作为博客图床</title>
+    <url>/2020/03/25/%E4%BD%BF%E7%94%A8PicGo%E5%B0%8F%E5%B7%A5%E5%85%B7%E7%99%BD%E5%AB%96Gitee-%E7%A0%81%E4%BA%91-%E4%BD%9C%E4%B8%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_008.jpg" alt=""></p>
+<p>很多小伙伴在写博客的过程中都遇到一个普遍的问题，那就是如何引用和存放图片。博客图片存放于本地占内存，存放于GitHub上访问速度太慢，好在国内有许多可以设置为图床的地方，比如微博啊、码云啊、七牛云啊。本文所讲的正是将Gitee码云作为个人博客的免费图床。</p>
 <a id="more"></a>
 
 <hr>
-<h1 id="1-何为静态博客，何为动态博客"><a href="#1-何为静态博客，何为动态博客" class="headerlink" title="1.何为静态博客，何为动态博客"></a>1.何为静态博客，何为动态博客</h1><p>首先，要知道一个网站最基础的部分就是网页，而与其从网页开始写起，不如利用大牛们已经做好的博客生成器来解决网页编写的问题。</p>
-<p>如今有很多好用热门的博客生成器，一般来说，博客生成器分为动态和静态两种。典型的静态博客生成器有：<code>Hexo、Jekyll、Hugo</code>等，典型的动态博客生成器有：<code>WordPress、FarBox、Ghost</code>等。</p>
-<p>那么什么是静态博客，什么是动态博客呢？</p>
-<h2 id="1-1-静态博客"><a href="#1-1-静态博客" class="headerlink" title="1.1.静态博客"></a>1.1.静态博客</h2><p>HTML(超文本标记语言)格式的网页通常被称为静态网页，是直接渲染生成HTML标准的文件呈现给客户端，不需要数据库的支撑就可完成。静态博客中可以包含文本、声音、图像、FLASH动画等。</p>
-<h2 id="1-2-动态博客"><a href="#1-2-动态博客" class="headerlink" title="1.2.动态博客"></a>1.2.动态博客</h2><p>所谓动态，是指网页渲染是通过动态调用再解析而成，生产的网页不是HTML文件，需要服务器端伪装成HTML文件呈现给客户端。“动”不是指网页中的页面元素或者特效在动，而是指与后台数据库进行交互，进行数据传递。比如用户注册登录、留言等功能。</p>
+<h1 id="创建码云图床库"><a href="#创建码云图床库" class="headerlink" title="创建码云图床库"></a>创建码云图床库</h1><p>在这之前先注册好一个码云账号。</p>
+<p>1.新建仓库</p>
+<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_03-58-49.png" alt=""></p>
+<p>2.设置仓库</p>
+<img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-06.png" style="zoom:80%;" />
+
+<p>注意：仓库要设为公开，勾选使用README文件初始化这个仓库</p>
 <hr>
-<h1 id="2-静态博客的优势"><a href="#2-静态博客的优势" class="headerlink" title="2.静态博客的优势"></a>2.静态博客的优势</h1><ul>
-<li>部署简单，降低建站成本</li>
-<li>所占资源相对少</li>
-<li>访问速度更快</li>
-<li>轻量安全性更高</li>
+<h1 id="小工具PicGo配置"><a href="#小工具PicGo配置" class="headerlink" title="小工具PicGo配置"></a>小工具PicGo配置</h1><p>因为每次上传单张图片真的很麻烦，所以用到了Picgo这个极大提高生产力的图片上传和管理的工具，一次性部署爽歪歪。</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://github.com/Molunerfinn/PicGo/realeses" target="_blank" rel="noopener">下载地址</a></p>
+<p>安装后主界面</p>
+<img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_04-19-10.png" style="zoom:80%;" />
+
+<hr>
+<h2 id="图床设置"><a href="#图床设置" class="headerlink" title="图床设置"></a>图床设置</h2><p>点击插件设置，输入<code>gitee</code>，安装<code>gitee-uploader</code>插件。</p>
+<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_04-21-11.png" style="zoom:80%;" />/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_04-26-09.png” style=”zoom:80%;” /&gt;</p>
+<ul>
+<li>repo: 用户名/仓库名称，如我的<code>suda-liu/images_store</code></li>
+<li>branch: 分支，这里写上<code>master</code></li>
+<li>token: 私人令牌</li>
+<li>path: 路径，一般写上<code>img</code></li>
+<li>customPath和customURL都不用填</li>
 </ul>
-<p>我的个人博客就是依靠Hexo框架进行搭建的。Hexo是一款基于Node.js的静态博客框架，所需依赖少，搭建简单，生成的静态网页也可以托管到远端服务器上。</p>
 <hr>
-<h1 id="3-参考"><a href="#3-参考" class="headerlink" title="3.参考"></a>3.参考</h1><p><a href="https://www.imydl.com/wzjs/9789.html" target="_blank" rel="noopener">说说 Hexo 静态博客框架</a></p>
-<p>每天坚持一点点！</p>
-]]></content>
-      <categories>
-        <category>入门系列</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客免密部署到GitHub的小操作</title>
-    <url>/2020/04/05/%E5%8D%9A%E5%AE%A2%E5%85%8D%E5%AF%86%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E7%9A%84%E5%B0%8F%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_009.jpg" alt=""></p>
-<p>每次写完博客，提交、部署到GitHub上的时候，会要求输入账户名和密码，我们可以通过设置SSH密钥以实现免密部署，来提高生产效率。</p>
-<a id="more"></a>
-
+<h2 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h2><p>登录进入码云，点击头像，进入设置</p>
+<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-26.png" alt=""></p>
+<p>找到私人令牌，并点击生成新令牌，把projects这一项勾选上，其他不用勾，然后点击提交。</p>
+<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_04-01-24.png" alt=""></p>
+<p>验证密码后就已经生成了token，复制到PicGo的配置里去。注意此令牌只显示一次，搞丢了又要重新生成。</p>
+<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_04-33-59.png" alt=""></p>
+<p>保存设置，设置gitee为默认图床。</p>
 <hr>
-<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>由于每次部署时GitHub都要确定用户是否为安全用户，所以要求输入账户名和密码。而SSH就保证了这样的安全。</p>
-<p>SSH是一种网络协议，用于计算机之间的加密登录。一般生成的是<code>id_rsa</code>和<code>id_rsa.pub</code>，一个私钥和一个公钥。</p>
-<p>原理就是将公钥储存到远端主机，私钥储存在本地，登录时远程主机会向用户发送一段随机字符串，用户用自己的私钥加密后，再发回来。远程主机用事先储存的公钥进行解密，如果成功，就证明用户是可信的，直接允许登录shell，不再要求密码。</p>
-<hr>
-<h1 id="检查现有的SSH密钥"><a href="#检查现有的SSH密钥" class="headerlink" title="检查现有的SSH密钥"></a>检查现有的SSH密钥</h1><p>打开Git Bash。输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
-
-<p>查看是否存在SSH密钥，若没有，则生成一个新的SSH密钥。</p>
-<hr>
-<h1 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"GitHub邮箱地址"</span></span><br></pre></td></tr></table></figure>
-
-<p>为了方便，回车三连。</p>
-<p>根据文件的生成路径，找到.ssh文件夹，打开目录下的<code>id_rsa.pub</code>，复制里面的所有内容。</p>
-<hr>
-<h1 id="将SSH密钥添加到GitHub账户"><a href="#将SSH密钥添加到GitHub账户" class="headerlink" title="将SSH密钥添加到GitHub账户"></a>将SSH密钥添加到GitHub账户</h1><p>右上角点击个人资料照片，点击<code>Setting</code></p>
-<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-04-05_14-45-24.png" alt=""></p>
-<p>在用户设置边栏找到<code>SSH and GPG keys</code>，点击<code>New SSH key</code>。</p>
-<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-04-05_14-46-00.png" alt=""></p>
-<p><code>Title</code>字段可自行命名一个描述性标签,并在<code>Key</code>中粘贴刚刚所复制内容，点击点击<code>Add SSH key</code>。</p>
-<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-04-05_14-46-19.png" alt=""></p>
-<hr>
-<h1 id="测试SSH密钥的连接"><a href="#测试SSH密钥的连接" class="headerlink" title="测试SSH密钥的连接"></a>测试SSH密钥的连接</h1><p>回到Git bash，输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p>首次输入可能会看到警告，键入<code>yes</code>即可。</p>
-<p>成功会返回验证消息：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Hi username! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="修改站点配置文件-config-yml"><a href="#修改站点配置文件-config-yml" class="headerlink" title="修改站点配置文件_config.yml"></a>修改站点配置文件_config.yml</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:xxxx&#x2F;xxxx.github.io.git</span><br><span class="line">  #格式必须是上述格式</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>这样SSH密钥便设置成功啦！</p>
-<hr>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh" target="_blank" rel="noopener">生成SSH密钥</a></p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>接下来直接往PicGo里拖动图片就可以完成图片上传，需要引用图片时，赋值PicGo生成的图片链接即可。后续的图片操作只需在PicGo里执行就行。</p>
+<p>超级方便的有木有！</p>
 ]]></content>
       <categories>
         <category>妙用好招</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
-        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -258,82 +224,122 @@
       </tags>
   </entry>
   <entry>
-    <title>使用PicGo小工具白嫖Gitee(码云)作为博客图床</title>
-    <url>/2020/03/25/%E4%BD%BF%E7%94%A8PicGo%E5%B0%8F%E5%B7%A5%E5%85%B7%E7%99%BD%E5%AB%96Gitee-%E7%A0%81%E4%BA%91-%E4%BD%9C%E4%B8%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_008.jpg" alt=""></p>
-<p>很多小伙伴在写博客的过程中都遇到一个普遍的问题，那就是如何引用和存放图片。博客图片存放于本地占内存，存放于GitHub上访问速度太慢，好在国内有许多可以设置为图床的地方，比如微博啊、码云啊、七牛云啊。本文所讲的正是将Gitee码云作为个人博客的免费图床。</p>
+    <title>是时候给你的Windows打造一个漂亮的终端了</title>
+    <url>/2020/03/26/%E6%98%AF%E6%97%B6%E5%80%99%E7%BB%99%E4%BD%A0%E7%9A%84Windows%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E6%BC%82%E4%BA%AE%E7%9A%84%E7%BB%88%E7%AB%AF%E4%BA%86/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_001.jpg" alt=""></p>
+<p>相比于Mac上那漂亮炫酷的终端，Windows上无论是cmd还是PowerShell都显得有些寒酸了，难道Windows就没有好用且漂亮的终端吗？</p>
+<p>最近，无意间发现了个好东西，当当当，那就是<code>Fluent Terminal</code>，一款基于微软<code>Fluent Design</code>设计理念的终端模拟器，界面精美，操作简单，还在等什么，是时候打造一个漂亮的终端了!</p>
 <a id="more"></a>
 
 <hr>
-<h1 id="创建码云图床库"><a href="#创建码云图床库" class="headerlink" title="创建码云图床库"></a>创建码云图床库</h1><p>在这之前先注册好一个码云账号。</p>
-<p>1.新建仓库</p>
-<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_03-58-49.png" alt=""></p>
-<p>2.设置仓库</p>
-<img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-06.png" style="zoom:80%;" />
+<p>先附上官方截图</p>
+<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/terminal.jpg" alt=""></p>
+<hr>
+<h1 id="下载Fluent-Terminal"><a href="#下载Fluent-Terminal" class="headerlink" title="下载Fluent Terminal"></a>下载Fluent Terminal</h1><p><a href="https://github.com/felixse/FluentTerminal/releases" target="_blank" rel="noopener">下载地址</a></p>
+<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-26_16-52-34.png" alt=""></p>
+<p>下载并解压缩，完成后按照官方说明，右键单击<code>Install.ps1</code>，然后选择“使用Powershell运行”。</p>
+<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-26_16-55-15.png" alt=""></p>
+<hr>
+<h1 id="安装oh-my-posh"><a href="#安装oh-my-posh" class="headerlink" title="安装oh-my-posh"></a>安装oh-my-posh</h1><p><code>oh-my-posh</code>类似于PowerShell版本的<code>oh-my-zsh</code>，它是一个PowerShell增强程序。</p>
+<p>1.使用 <code>PowerShell Gallery</code>来安装 <code>oh-my-posh</code>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Install-Module posh-git -Scope CurrentUser</span><br><span class="line">Install-Module oh-my-posh -Scope CurrentUser</span><br></pre></td></tr></table></figure>
 
-<p>注意：仓库要设为公开，勾选使用README文件初始化这个仓库</p>
-<hr>
-<h1 id="小工具PicGo配置"><a href="#小工具PicGo配置" class="headerlink" title="小工具PicGo配置"></a>小工具PicGo配置</h1><p>因为每次上传单张图片真的很麻烦，所以用到了Picgo这个极大提高生产力的图片上传和管理的工具，一次性部署爽歪歪。</p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://github.com/Molunerfinn/PicGo/realeses" target="_blank" rel="noopener">下载地址</a></p>
-<p>安装后主界面</p>
-<img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_04-19-10.png" style="zoom:80%;" />
 
+
+<p>2.创建PowerShell的配置文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (!(Test-Path -Path <span class="variable">$PROFILE</span>)) &#123;New-Item -Type File -Path <span class="variable">$PROFILE</span> -Force&#125;</span><br><span class="line">notepad <span class="variable">$PROFILE</span></span><br></pre></td></tr></table></figure>
+
+<p>在配置文件中敲入几行代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Import-Module posh-git</span><br><span class="line">Import-Module oh-my-posh</span><br><span class="line">Set-Theme Paradox #主题</span><br></pre></td></tr></table></figure>
+
+<p>这里的主题根据个人喜好来自行选择。</p>
 <hr>
-<h2 id="图床设置"><a href="#图床设置" class="headerlink" title="图床设置"></a>图床设置</h2><p>点击插件设置，输入<code>gitee</code>，安装<code>gitee-uploader</code>插件。</p>
-<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_04-21-11.png" style="zoom:80%;" />/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_04-26-09.png” style=”zoom:80%;” /&gt;</p>
-<ul>
-<li>repo: 用户名/仓库名称，如我的<code>suda-liu/images_store</code></li>
-<li>branch: 分支，这里写上<code>master</code></li>
-<li>token: 私人令牌</li>
-<li>path: 路径，一般写上<code>img</code></li>
-<li>customPath和customURL都不用填</li>
-</ul>
+<h1 id="下载字体"><a href="#下载字体" class="headerlink" title="下载字体"></a>下载字体</h1><p>有兴趣的小伙伴还可以去下载字体，这里提供一个我正在使用的<a href="https://github.com/powerline/fonts" target="_blank" rel="noopener">字体库</a>。下载完成后同样右键单击<code>Install.ps1</code>，然后选择“使用Powershell运行”。</p>
 <hr>
-<h2 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h2><p>登录进入码云，点击头像，进入设置</p>
-<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_04-00-26.png" alt=""></p>
-<p>找到私人令牌，并点击生成新令牌，把projects这一项勾选上，其他不用勾，然后点击提交。</p>
-<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_04-01-24.png" alt=""></p>
-<p>验证密码后就已经生成了token，复制到PicGo的配置里去。注意此令牌只显示一次，搞丢了又要重新生成。</p>
-<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-25_04-33-59.png" alt=""></p>
-<p>保存设置，设置gitee为默认图床。</p>
+<h1 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h1><p>现了刚刚下好的字体，同时你可以设置自己喜欢的主题颜色，调整大小等等。</p>
+<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-26_17-06-02.png" alt=""></p>
+<p>重启打开之后就可以生效了，是不是看起来还不错！</p>
 <hr>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>接下来直接往PicGo里拖动图片就可以完成图片上传，需要引用图片时，赋值PicGo生成的图片链接即可。后续的图片操作只需在PicGo里执行就行。</p>
-<p>超级方便的有木有！</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.tickmao.com/2019/08/08/termial-windows-tickmao/" target="_blank" rel="noopener">https://www.tickmao.com/2019/08/08/termial-windows-tickmao/</a></p>
 ]]></content>
       <categories>
         <category>妙用好招</category>
+      </categories>
+      <tags>
+        <tag>Terminal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你可能没仔细了解过什么是静态博客</title>
+    <url>/2020/03/19/%E4%BD%A0%E5%8F%AF%E8%83%BD%E6%B2%A1%E4%BB%94%E7%BB%86%E4%BA%86%E8%A7%A3%E8%BF%87%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_006.jpg"  />
+
+<p>在我们期待去搭建个人博客之前，还是先了解下所谓的静态博客。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="1-何为静态博客，何为动态博客"><a href="#1-何为静态博客，何为动态博客" class="headerlink" title="1.何为静态博客，何为动态博客"></a>1.何为静态博客，何为动态博客</h1><p>首先，要知道一个网站最基础的部分就是网页，而与其从网页开始写起，不如利用大牛们已经做好的博客生成器来解决网页编写的问题。</p>
+<p>如今有很多好用热门的博客生成器，一般来说，博客生成器分为动态和静态两种。典型的静态博客生成器有：<code>Hexo、Jekyll、Hugo</code>等，典型的动态博客生成器有：<code>WordPress、FarBox、Ghost</code>等。</p>
+<p>那么什么是静态博客，什么是动态博客呢？</p>
+<h2 id="1-1-静态博客"><a href="#1-1-静态博客" class="headerlink" title="1.1.静态博客"></a>1.1.静态博客</h2><p>HTML(超文本标记语言)格式的网页通常被称为静态网页，是直接渲染生成HTML标准的文件呈现给客户端，不需要数据库的支撑就可完成。静态博客中可以包含文本、声音、图像、FLASH动画等。</p>
+<h2 id="1-2-动态博客"><a href="#1-2-动态博客" class="headerlink" title="1.2.动态博客"></a>1.2.动态博客</h2><p>所谓动态，是指网页渲染是通过动态调用再解析而成，生产的网页不是HTML文件，需要服务器端伪装成HTML文件呈现给客户端。“动”不是指网页中的页面元素或者特效在动，而是指与后台数据库进行交互，进行数据传递。比如用户注册登录、留言等功能。</p>
+<hr>
+<h1 id="2-静态博客的优势"><a href="#2-静态博客的优势" class="headerlink" title="2.静态博客的优势"></a>2.静态博客的优势</h1><ul>
+<li>部署简单，降低建站成本</li>
+<li>所占资源相对少</li>
+<li>访问速度更快</li>
+<li>轻量安全性更高</li>
+</ul>
+<p>我的个人博客就是依靠Hexo框架进行搭建的。Hexo是一款基于Node.js的静态博客框架，所需依赖少，搭建简单，生成的静态网页也可以托管到远端服务器上。</p>
+<hr>
+<h1 id="3-参考"><a href="#3-参考" class="headerlink" title="3.参考"></a>3.参考</h1><p><a href="https://www.imydl.com/wzjs/9789.html" target="_blank" rel="noopener">说说 Hexo 静态博客框架</a></p>
+<p>每天坚持一点点！</p>
+]]></content>
+      <categories>
+        <category>入门系列</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
-    <title>妙用Gitee(码云)提升GitHub下载速度</title>
-    <url>/2020/03/25/%E5%A6%99%E7%94%A8Gitee-%E7%A0%81%E4%BA%91-%E6%8F%90%E5%8D%87GitHub%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_007.jpg" alt=""></p>
-<p>众所周知，GitHub是一个大宝库，藏着许多开源的优秀的项目，然而一个问题是下载速度不堪入目，相信有经验的小伙伴都有那等待克隆下载的痛苦……</p>
-<p>本文就来提供一个妙招，教你再也不用苦等程序的下载了。</p>
+    <title>以NexT主题为例讲讲如何更换Hexo博客主题</title>
+    <url>/2020/03/21/%E4%BB%A5NexT%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B%E8%AE%B2%E8%AE%B2%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_004.jpg" alt=""></p>
+<p>搭建好了个人博客之后，很多人觉得官方的<code>landscape</code>主题不好看，那本篇文章以<code>NexT</code>主题为例来讲下如何更换主题和配置主题。</p>
 <a id="more"></a>
 
 <hr>
-<h1 id="码云Gitee"><a href="#码云Gitee" class="headerlink" title="码云Gitee"></a>码云Gitee</h1><p>码云(Gitee)平台相当于是国内的GitHub，通过码云的转接，即可实现GitHub上项目的下载加速。</p>
-<p>首先是要确保有一个码云的账户。</p>
-<p>点击加号，选择“从<code>GitHub/GitLab</code>导入仓库”</p>
-<p>填写想导入的仓库的地址，点击导入</p>
-<p>一般要等一会，码云就会克隆出一份同GitHub上一模一样的项目。</p>
-<p>复制码云提供的项目地址，会发现克隆速度已经很快了，很快就能下载完。</p>
+<h1 id="1-下载最新版本"><a href="#1-下载最新版本" class="headerlink" title="1.下载最新版本"></a>1.下载最新版本</h1><p>这是官方<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题页面</a>，浏览并选中一款我们喜欢的主题。</p>
+<p>我选中了这款优雅的主题<code>NexT</code>。</p>
+<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/162139.png" alt=""></p>
+<p>我们直接将其克隆到博客themes目录下即可。</p>
+<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/162459.png" alt=""></p>
+<p>以下是命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes\next</span><br></pre></td></tr></table></figure>
+
+<p>此外由于NexT主题每个月都会发布新版本，所以我们还得加一个命令更新</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd themes&#x2F;next</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h1 id="重新关联GitHub"><a href="#重新关联GitHub" class="headerlink" title="重新关联GitHub"></a>重新关联GitHub</h1><p>我们通过码云克隆到本地的项目是关联的码云Gitee的地址，所以还需要我们将本地项目重新关联到GitHub上。</p>
-<p>找到本地仓库目录下的<code>.git</code>文件夹</p>
-<p>打开<code>.git</code>文件夹下的<code>_config</code>配置文件</p>
-<p>将码云Gitee提供的项目地址换回原来的GitHub项目地址</p>
+<h1 id="2-设置"><a href="#2-设置" class="headerlink" title="2.设置"></a>2.设置</h1><p>安装完后就可以在<strong>根目录下的配置文件_config,yml</strong>进行设置，</p>
+<p>找到<code>theme</code>关键字，把<code>landscape</code>换位<code>next</code>即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
+<p>若选中了别的主题，可以看主题的README文件，方法步骤都一样，大差不差。</p>
 <hr>
+<h1 id="3-启用"><a href="#3-启用" class="headerlink" title="3.启用"></a>3.启用</h1><p>切换主题前先清除Hexo缓存，再来生成并部署到远端。</p>
+<p>三部曲走起：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="4-最后"><a href="#4-最后" class="headerlink" title="4.最后"></a>4.最后</h1><p>主题的配置大家可以自己慢慢去玩，添加超链接、添加打赏、动画啊，还有就是NexT常常更新，不同版本一些配置可能不一样，大家可以根据文档教程<a href="https://theme-next.org/" target="_blank" rel="noopener">NexT主题</a>来慢慢折腾。</p>
 ]]></content>
       <categories>
-        <category>妙用好招</category>
+        <category>实战记录</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -380,127 +386,124 @@
       </tags>
   </entry>
   <entry>
-    <title>以NexT主题为例讲讲如何更换Hexo博客主题</title>
-    <url>/2020/03/21/%E4%BB%A5NexT%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B%E8%AE%B2%E8%AE%B2%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_004.jpg" alt=""></p>
-<p>搭建好了个人博客之后，很多人觉得官方的<code>landscape</code>主题不好看，那本篇文章以<code>NexT</code>主题为例来讲下如何更换主题和配置主题。</p>
+    <title>通过一个初步的太阳系程序来理解OpenGL中的相关函数</title>
+    <url>/2020/04/11/%E9%80%9A%E8%BF%87%E4%B8%80%E4%B8%AA%E5%88%9D%E6%AD%A5%E7%9A%84%E5%A4%AA%E9%98%B3%E7%B3%BB%E7%A8%8B%E5%BA%8F%E6%9D%A5%E7%90%86%E8%A7%A3OpenGL%E4%B8%AD%E7%9A%84%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_021.jpg" alt=""></p>
+<p>完成一个初步的太阳系程序：</p>
+<p>三个球体，分别为太阳、地球和月亮。实现地球不停绕太阳旋转，月亮绕地球旋转。</p>
 <a id="more"></a>
 
 <hr>
-<h1 id="1-下载最新版本"><a href="#1-下载最新版本" class="headerlink" title="1.下载最新版本"></a>1.下载最新版本</h1><p>这是官方<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题页面</a>，浏览并选中一款我们喜欢的主题。</p>
-<p>我选中了这款优雅的主题<code>NexT</code>。</p>
-<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/162139.png" alt=""></p>
-<p>我们直接将其克隆到博客themes目录下即可。</p>
-<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/162459.png" alt=""></p>
-<p>以下是命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes\next</span><br></pre></td></tr></table></figure>
+<h1 id="一些重要函数的理解"><a href="#一些重要函数的理解" class="headerlink" title="一些重要函数的理解"></a>一些重要函数的理解</h1><h2 id="glutWireSphere"><a href="#glutWireSphere" class="headerlink" title="glutWireSphere"></a>glutWireSphere</h2><p><strong>功能</strong></p>
+<p>用于渲染出球体（由经纬线构成）。球体球心位于原点，即是在窗口客户区的中心。</p>
+<p><strong>函数原型</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void glutWireSphere(GLdouble radius, GLint slices, GLint stacks);</span><br></pre></td></tr></table></figure>
 
-<p>此外由于NexT主题每个月都会发布新版本，所以我们还得加一个命令更新</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd themes&#x2F;next</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<p><strong>参数</strong></p>
+<ul>
+<li><p>radius球的半径</p>
+</li>
+<li><p>slices：以Z轴上线段为直径分布的圆周线的条数（将Z轴看成地球的地轴，类似于经线）</p>
+</li>
+<li><p>stacks：围绕在Z轴周围的线的条数（类似于地球上纬线）</p>
+</li>
+</ul>
+<p>类似的函数为：<code>glutSolidSphere</code></p>
+<hr>
+<h2 id="glRotatef"><a href="#glRotatef" class="headerlink" title="glRotatef"></a>glRotatef</h2><p><strong>功能</strong></p>
+<p>以点(0,0,0)到点(x,y,z)为轴，旋转angle角度；</p>
+<p><strong>函数原型</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void glRotatef(GLfloat angle, GLfloat x, GLfloat y, GLfloat z)</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数</strong></p>
+<ul>
+<li>angle：为旋转的角度，单位为度。</li>
+<li>x,y,z：为对应xyz轴的布尔值变量。0.0表示假，而非零参数则表示真。</li>
+</ul>
+<p>做(0,0,0)到(x,y,z)的向量，用右手握住这条向量，大拇指指向向量的正方向，四指环绕的方向就是旋转的方向</p>
+<p><strong>如果设置的旋转值（x,y,z的值）为正数，那么旋转的方向是逆时针的，如果旋转值是负数，那么旋转的方向是顺时针的</strong>。</p>
+<hr>
+<h2 id="glTranslatef"><a href="#glTranslatef" class="headerlink" title="glTranslatef"></a>glTranslatef</h2><p><strong>功能</strong></p>
+<p>将你绘点坐标的原点在当前原点的基础上平移一个(x,y,z)向量</p>
+<p><strong>函数原型</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void glTranslatef(GLfloat x,GLfloat y,GLfloat z);</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h1 id="2-设置"><a href="#2-设置" class="headerlink" title="2.设置"></a>2.设置</h1><p>安装完后就可以在<strong>根目录下的配置文件_config,yml</strong>进行设置，</p>
-<p>找到<code>theme</code>关键字，把<code>landscape</code>换位<code>next</code>即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<p>若选中了别的主题，可以看主题的README文件，方法步骤都一样，大差不差。</p>
+<h2 id="glPushMatrix-amp-amp-glPopMatrix"><a href="#glPushMatrix-amp-amp-glPopMatrix" class="headerlink" title="glPushMatrix &amp;&amp; glPopMatrix"></a>glPushMatrix &amp;&amp; glPopMatrix</h2><p><code>glPushMatrix</code>，<code>glPopMatrix</code>这两个函数是搭配使用的，中间放置几何变换。<code>glPushMatrix</code>的作用是把矩阵压入栈中保存起来，留着以后再用。</p>
 <hr>
-<h1 id="3-启用"><a href="#3-启用" class="headerlink" title="3.启用"></a>3.启用</h1><p>切换主题前先清除Hexo缓存，再来生成并部署到远端。</p>
-<p>三部曲走起：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h1 id="实现物体不停运动"><a href="#实现物体不停运动" class="headerlink" title="实现物体不停运动"></a>实现物体不停运动</h1><ol>
+<li><code>glutIdleFunc</code>事件,当循环队列处于空闲时则触发该事件</li>
+<li><code>glutTimerFunc</code>单位时间内内触发事件</li>
+</ol>
+<p><code>glutTimerFunc</code>回调事件只执行一次,如果想一直执行的话就需要在内部再次调该方法,下面用glutTimerFunc来替代<code>glutIdleFunc</code>实现。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">planetMove</span><span class="params">(<span class="keyword">int</span> value)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (planetMove &gt; <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		G_fAngle_earth += <span class="number">0.2f</span>;</span><br><span class="line">		G_fAngle_moon += <span class="number">1.5f</span>;</span><br><span class="line"></span><br><span class="line">		glutPostRedisplay();</span><br><span class="line">	&#125;</span><br><span class="line">	glutTimerFunc(<span class="number">10</span>, planetMove, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h1 id="4-最后"><a href="#4-最后" class="headerlink" title="4.最后"></a>4.最后</h1><p>主题的配置大家可以自己慢慢去玩，添加超链接、添加打赏、动画啊，还有就是NexT常常更新，不同版本一些配置可能不一样，大家可以根据文档教程<a href="https://theme-next.org/" target="_blank" rel="noopener">NexT主题</a>来慢慢折腾。</p>
+<h1 id="程序代码"><a href="#程序代码" class="headerlink" title="程序代码"></a>程序代码</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;GL/freeglut.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//定义输出窗口的大小</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> WINDOW_HEIGHT 300</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> WINDOW_WIDTH 500</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//摄像机离物体的距离</span></span><br><span class="line"><span class="keyword">float</span> G_fDistance = <span class="number">6.0f</span>;</span><br><span class="line"><span class="keyword">float</span> G_fAngle_horizon = <span class="number">0.0f</span>;</span><br><span class="line"><span class="keyword">float</span> G_fAngle_vertical = <span class="number">0.0f</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">float</span> G_fSunToEarth = <span class="number">3.0f</span>;</span><br><span class="line"><span class="keyword">float</span> G_fEarthToMoon = <span class="number">0.5f</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//物体的旋转角度 </span></span><br><span class="line"><span class="keyword">float</span> G_fAngle_earth = <span class="number">90.0f</span>;</span><br><span class="line"><span class="keyword">float</span> G_fAngle_moon = <span class="number">90.0f</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reshape</span><span class="params">(GLsizei w, GLsizei h)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">planetMove</span><span class="params">(<span class="keyword">int</span> value)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//主函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	glutInit(&amp;argc, argv);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//初始化OPENGL显示方式</span></span><br><span class="line">	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//设定OPENGL窗口位置和大小</span></span><br><span class="line">	glutInitWindowSize(<span class="number">800</span>, <span class="number">500</span>);</span><br><span class="line">	glutInitWindowPosition(<span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//打开窗口</span></span><br><span class="line">	glutCreateWindow(<span class="string">"第二次作业"</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//调用初始化函数</span></span><br><span class="line">	init();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//设定窗口大小变化的回调函数</span></span><br><span class="line">	glutReshapeFunc(reshape);</span><br><span class="line"></span><br><span class="line">	glutTimerFunc(<span class="number">10</span>, planetMove, <span class="number">0</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//开始OPENGL的循环</span></span><br><span class="line">	glutDisplayFunc(<span class="built_in">display</span>);</span><br><span class="line"></span><br><span class="line">	glutMainLoop();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//用户初始化函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	glEnable(GL_DEPTH_TEST);</span><br><span class="line">	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);</span><br><span class="line"></span><br><span class="line">	glEnable(GL_COLOR_MATERIAL);</span><br><span class="line">	glColorMaterial(GL_FRONT_AND_BACK, GL_DIFFUSE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//窗口大小变化时的回调函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reshape</span><span class="params">(GLsizei w, GLsizei h)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//设定视区</span></span><br><span class="line">	glViewport(<span class="number">0</span>, <span class="number">0</span>, w, h);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//设定透视方式</span></span><br><span class="line">	glMatrixMode(GL_PROJECTION);</span><br><span class="line">	glLoadIdentity();</span><br><span class="line">	gluPerspective(<span class="number">60.0</span>, <span class="number">1.0</span> * (GLfloat)w / (GLfloat)h, <span class="number">1.0</span>, <span class="number">30.0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//每桢OpenGL都会调用这个函数，用户应该把显示代码放在这个函数中</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//设置清除屏幕的颜色，并清除屏幕和深度缓冲</span></span><br><span class="line">	glClearColor(<span class="number">0.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glClearDepth(<span class="number">1.0f</span>);</span><br><span class="line">	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//绘图</span></span><br><span class="line">	glMatrixMode(GL_MODELVIEW);</span><br><span class="line">	glLoadIdentity();  <span class="comment">//使栈顶矩阵为单位矩阵</span></span><br><span class="line">	glTranslatef(<span class="number">0.0</span>, <span class="number">0.0</span>, -G_fDistance);</span><br><span class="line">	glRotatef(G_fAngle_horizon, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>);</span><br><span class="line">	glRotatef(G_fAngle_vertical, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//the Sun</span></span><br><span class="line">	glColor3f(<span class="number">0.8f</span>, <span class="number">0.2f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glutWireSphere(<span class="number">0.6</span>, <span class="number">20</span>, <span class="number">16</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//the Earth</span></span><br><span class="line">	glRotatef(<span class="number">20.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>, <span class="number">1.0f</span>);</span><br><span class="line">	glRotatef(G_fAngle_earth, <span class="number">0.0f</span>, <span class="number">1.0f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glTranslatef(<span class="number">0.0</span>, <span class="number">0.0</span>, -G_fSunToEarth);</span><br><span class="line">	glColor3f(<span class="number">0.0f</span>, <span class="number">0.2f</span>, <span class="number">0.8f</span>);</span><br><span class="line">	glutWireSphere(<span class="number">0.3</span>, <span class="number">20</span>, <span class="number">16</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//the MoonA</span></span><br><span class="line">	glRotatef(<span class="number">60.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>, <span class="number">1.0f</span>);</span><br><span class="line">	glRotatef(G_fAngle_moon, <span class="number">0.0f</span>, <span class="number">1.0f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glTranslatef(<span class="number">0.0</span>, <span class="number">0.0</span>, -G_fEarthToMoon);</span><br><span class="line">	glColor3f(<span class="number">0.0</span>, <span class="number">0.8f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glutWireSphere(<span class="number">0.1</span>, <span class="number">20</span>, <span class="number">16</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//the MoonB</span></span><br><span class="line">	glTranslatef(G_fEarthToMoon, <span class="number">0.0f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glRotatef(<span class="number">60.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>, <span class="number">1.0f</span>);</span><br><span class="line">	glRotatef(G_fAngle_moon, <span class="number">0.0f</span>, <span class="number">1.0f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glColor3f(<span class="number">0.8</span>, <span class="number">0.8f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glutWireSphere(<span class="number">0.1</span>, <span class="number">20</span>, <span class="number">16</span>);</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	<span class="comment">//交换前后缓冲区</span></span><br><span class="line">	glutSwapBuffers();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">planetMove</span><span class="params">(<span class="keyword">int</span> value)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (planetMove &gt; <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		G_fAngle_earth += <span class="number">0.2f</span>;</span><br><span class="line">		G_fAngle_moon += <span class="number">1.5f</span>;</span><br><span class="line"></span><br><span class="line">		glutPostRedisplay();</span><br><span class="line">	&#125;</span><br><span class="line">	glutTimerFunc(<span class="number">10</span>, planetMove, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.cnblogs.com/1024Planet/p/5647224.html" target="_blank" rel="noopener">OpenGL的glRotatef旋转变换函数详解</a></p>
+<p><a href="https://blog.csdn.net/shenziheng1/article/details/61914297" target="_blank" rel="noopener">OpenGL编程指南4：双缓冲实现运行</a></p>
+<p><a href="https://www.cnblogs.com/Clingingboy/archive/2010/10/17/1853671.html" target="_blank" rel="noopener">OpenGL学习笔记(6)第一个动画</a></p>
+<p><a href="https://www.voorp.com/a/OpenGL%E5%A4%AA%E9%98%B3%E6%98%9F%E7%B3%BB%E7%9A%84%E5%AE%9E%E7%8E%B0openglcDoBetterCSDN%E5%8D%9A%E5%AE%A2" target="_blank" rel="noopener">OpenGL太阳星系的实现openglcDoBetterCSDN博客</a></p>
 ]]></content>
       <categories>
         <category>实战记录</category>
+        <category>入门系列</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
+        <tag>OpenGL</tag>
       </tags>
   </entry>
   <entry>
-    <title>解决npm警告、错误的方法记录</title>
-    <url>/2020/03/26/%E8%A7%A3%E5%86%B3npm%E7%9B%B8%E5%85%B3%E8%AD%A6%E5%91%8A%E3%80%81%E9%94%99%E8%AF%AF%E7%9A%84%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_013.jpg" alt=""></p>
-<p>记录所遇到过的各种有关<code>npm</code>的问题及其解决方法。</p>
+    <title>博客免密部署到GitHub的小操作</title>
+    <url>/2020/04/05/%E5%8D%9A%E5%AE%A2%E5%85%8D%E5%AF%86%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E7%9A%84%E5%B0%8F%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_009.jpg" alt=""></p>
+<p>每次写完博客，提交、部署到GitHub上的时候，会要求输入账户名和密码，我们可以通过设置SSH密钥以实现免密部署，来提高生产效率。</p>
 <a id="more"></a>
 
 <hr>
-<h1 id="解决npm-ERROR-Unexpected-end-of-JSON-input-while-parsing-near"><a href="#解决npm-ERROR-Unexpected-end-of-JSON-input-while-parsing-near" class="headerlink" title="解决npm ERROR! Unexpected end of JSON input while parsing near"></a>解决npm ERROR! Unexpected end of JSON input while parsing near</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm ERR! Unexpected end of JSON input <span class="keyword">while</span> parsing near</span><br></pre></td></tr></table></figure>
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>由于每次部署时GitHub都要确定用户是否为安全用户，所以要求输入账户名和密码。而SSH就保证了这样的安全。</p>
+<p>SSH是一种网络协议，用于计算机之间的加密登录。一般生成的是<code>id_rsa</code>和<code>id_rsa.pub</code>，一个私钥和一个公钥。</p>
+<p>原理就是将公钥储存到远端主机，私钥储存在本地，登录时远程主机会向用户发送一段随机字符串，用户用自己的私钥加密后，再发回来。远程主机用事先储存的公钥进行解密，如果成功，就证明用户是可信的，直接允许登录shell，不再要求密码。</p>
+<hr>
+<h1 id="检查现有的SSH密钥"><a href="#检查现有的SSH密钥" class="headerlink" title="检查现有的SSH密钥"></a>检查现有的SSH密钥</h1><p>打开Git Bash。输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
 
-<p>这个错误的解决方法有以下几种：</p>
-<p>1.删掉<code>package.lock.json</code></p>
-<p>2.清除<code>cache</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure>
+<p>查看是否存在SSH密钥，若没有，则生成一个新的SSH密钥。</p>
+<hr>
+<h1 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"GitHub邮箱地址"</span></span><br></pre></td></tr></table></figure>
 
-<p>3.进入下面这个文件夹清除cache<br>路径：<code>C:/Users/PC/AppData/Roaming/npm-cache</code><br>执行：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure>
+<p>为了方便，回车三连。</p>
+<p>根据文件的生成路径，找到.ssh文件夹，打开目录下的<code>id_rsa.pub</code>，复制里面的所有内容。</p>
+<hr>
+<h1 id="将SSH密钥添加到GitHub账户"><a href="#将SSH密钥添加到GitHub账户" class="headerlink" title="将SSH密钥添加到GitHub账户"></a>将SSH密钥添加到GitHub账户</h1><p>右上角点击个人资料照片，点击<code>Setting</code></p>
+<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-04-05_14-45-24.png" alt=""></p>
+<p>在用户设置边栏找到<code>SSH and GPG keys</code>，点击<code>New SSH key</code>。</p>
+<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-04-05_14-46-00.png" alt=""></p>
+<p><code>Title</code>字段可自行命名一个描述性标签,并在<code>Key</code>中粘贴刚刚所复制内容，点击点击<code>Add SSH key</code>。</p>
+<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-04-05_14-46-19.png" alt=""></p>
+<hr>
+<h1 id="测试SSH密钥的连接"><a href="#测试SSH密钥的连接" class="headerlink" title="测试SSH密钥的连接"></a>测试SSH密钥的连接</h1><p>回到Git bash，输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 
-<p>4.不要用淘宝镜像</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm <span class="built_in">set</span> registry https://registry.npmjs.org/</span><br></pre></td></tr></table></figure>
+<p>首次输入可能会看到警告，键入<code>yes</code>即可。</p>
+<p>成功会返回验证消息：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Hi username! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
 
 <hr>
-<h1 id="解决WARN-optional-SKIPPING-OPTIONAL-DEPENDENCY-fsevents-2-1-2-node-modules-fsevents"><a href="#解决WARN-optional-SKIPPING-OPTIONAL-DEPENDENCY-fsevents-2-1-2-node-modules-fsevents" class="headerlink" title="解决WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):"></a>解决WARN optional SKIPPING OPTIONAL DEPENDENCY: <a href="mailto:fsevents@2.1.2">fsevents@2.1.2</a> (node_modules\fsevents):</h1><p>在安装<code>hexo-deployer-git</code>过程中出现以下问题</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted &#123;&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;&#125; (current: &#123;&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="修改站点配置文件-config-yml"><a href="#修改站点配置文件-config-yml" class="headerlink" title="修改站点配置文件_config.yml"></a>修改站点配置文件_config.yml</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:xxxx&#x2F;xxxx.github.io.git</span><br><span class="line">  #格式必须是上述格式</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
-<p>fsevent的作用是能够检测文件目录的修改，可以记录恶意软件的非法操作，获取恶意软件的完整路径，删除和修改日期。</p>
-<p>原因：fsevent是mac系统的可选依赖，在win或者Linux下使用了，会有警告。在windows上环境下可以忽略,也可以删除fsevent文件夹。</p>
+<p>这样SSH密钥便设置成功啦！</p>
 <hr>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.cnblogs.com/sansancn/p/11139030.html" target="_blank" rel="noopener">https://www.cnblogs.com/sansancn/p/11139030.html</a></p>
-<p><a href="https://docs.npmjs.com/common-errors" target="_blank" rel="noopener">常见错误|npm文档</a></p>
-]]></content>
-      <categories>
-        <category>疑难杂症</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>是时候给你的Windows打造一个漂亮的终端了</title>
-    <url>/2020/03/26/%E6%98%AF%E6%97%B6%E5%80%99%E7%BB%99%E4%BD%A0%E7%9A%84Windows%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E6%BC%82%E4%BA%AE%E7%9A%84%E7%BB%88%E7%AB%AF%E4%BA%86/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_001.jpg" alt=""></p>
-<p>相比于Mac上那漂亮炫酷的终端，Windows上无论是cmd还是PowerShell都显得有些寒酸了，难道Windows就没有好用且漂亮的终端吗？</p>
-<p>最近，无意间发现了个好东西，当当当，那就是<code>Fluent Terminal</code>，一款基于微软<code>Fluent Design</code>设计理念的终端模拟器，界面精美，操作简单，还在等什么，是时候打造一个漂亮的终端了!</p>
-<a id="more"></a>
-
-<hr>
-<p>先附上官方截图</p>
-<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/terminal.jpg" alt=""></p>
-<hr>
-<h1 id="下载Fluent-Terminal"><a href="#下载Fluent-Terminal" class="headerlink" title="下载Fluent Terminal"></a>下载Fluent Terminal</h1><p><a href="https://github.com/felixse/FluentTerminal/releases" target="_blank" rel="noopener">下载地址</a></p>
-<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-26_16-52-34.png" alt=""></p>
-<p>下载并解压缩，完成后按照官方说明，右键单击<code>Install.ps1</code>，然后选择“使用Powershell运行”。</p>
-<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-26_16-55-15.png" alt=""></p>
-<hr>
-<h1 id="安装oh-my-posh"><a href="#安装oh-my-posh" class="headerlink" title="安装oh-my-posh"></a>安装oh-my-posh</h1><p><code>oh-my-posh</code>类似于PowerShell版本的<code>oh-my-zsh</code>，它是一个PowerShell增强程序。</p>
-<p>1.使用 <code>PowerShell Gallery</code>来安装 <code>oh-my-posh</code>。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Install-Module posh-git -Scope CurrentUser</span><br><span class="line">Install-Module oh-my-posh -Scope CurrentUser</span><br></pre></td></tr></table></figure>
-
-
-
-<p>2.创建PowerShell的配置文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (!(Test-Path -Path <span class="variable">$PROFILE</span>)) &#123;New-Item -Type File -Path <span class="variable">$PROFILE</span> -Force&#125;</span><br><span class="line">notepad <span class="variable">$PROFILE</span></span><br></pre></td></tr></table></figure>
-
-<p>在配置文件中敲入几行代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Import-Module posh-git</span><br><span class="line">Import-Module oh-my-posh</span><br><span class="line">Set-Theme Paradox #主题</span><br></pre></td></tr></table></figure>
-
-<p>这里的主题根据个人喜好来自行选择。</p>
-<hr>
-<h1 id="下载字体"><a href="#下载字体" class="headerlink" title="下载字体"></a>下载字体</h1><p>有兴趣的小伙伴还可以去下载字体，这里提供一个我正在使用的<a href="https://github.com/powerline/fonts" target="_blank" rel="noopener">字体库</a>。下载完成后同样右键单击<code>Install.ps1</code>，然后选择“使用Powershell运行”。</p>
-<hr>
-<h1 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h1><p>现了刚刚下好的字体，同时你可以设置自己喜欢的主题颜色，调整大小等等。</p>
-<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/Snipaste_2020-03-26_17-06-02.png" alt=""></p>
-<p>重启打开之后就可以生效了，是不是看起来还不错！</p>
-<hr>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.tickmao.com/2019/08/08/termial-windows-tickmao/" target="_blank" rel="noopener">https://www.tickmao.com/2019/08/08/termial-windows-tickmao/</a></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh" target="_blank" rel="noopener">生成SSH密钥</a></p>
 ]]></content>
       <categories>
         <category>妙用好招</category>
       </categories>
       <tags>
-        <tag>Terminal</tag>
+        <tag>Hexo</tag>
+        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -568,6 +571,73 @@
       </categories>
       <tags>
         <tag>OpenGL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决npm警告、错误的方法记录</title>
+    <url>/2020/03/26/%E8%A7%A3%E5%86%B3npm%E7%9B%B8%E5%85%B3%E8%AD%A6%E5%91%8A%E3%80%81%E9%94%99%E8%AF%AF%E7%9A%84%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_013.jpg" alt=""></p>
+<p>记录所遇到过的各种有关<code>npm</code>的问题及其解决方法。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="解决npm-ERROR-Unexpected-end-of-JSON-input-while-parsing-near"><a href="#解决npm-ERROR-Unexpected-end-of-JSON-input-while-parsing-near" class="headerlink" title="解决npm ERROR! Unexpected end of JSON input while parsing near"></a>解决npm ERROR! Unexpected end of JSON input while parsing near</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm ERR! Unexpected end of JSON input <span class="keyword">while</span> parsing near</span><br></pre></td></tr></table></figure>
+
+<p>这个错误的解决方法有以下几种：</p>
+<p>1.删掉<code>package.lock.json</code></p>
+<p>2.清除<code>cache</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure>
+
+<p>3.进入下面这个文件夹清除cache<br>路径：<code>C:/Users/PC/AppData/Roaming/npm-cache</code><br>执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure>
+
+<p>4.不要用淘宝镜像</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm <span class="built_in">set</span> registry https://registry.npmjs.org/</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="解决WARN-optional-SKIPPING-OPTIONAL-DEPENDENCY-fsevents-2-1-2-node-modules-fsevents"><a href="#解决WARN-optional-SKIPPING-OPTIONAL-DEPENDENCY-fsevents-2-1-2-node-modules-fsevents" class="headerlink" title="解决WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):"></a>解决WARN optional SKIPPING OPTIONAL DEPENDENCY: <a href="mailto:fsevents@2.1.2">fsevents@2.1.2</a> (node_modules\fsevents):</h1><p>在安装<code>hexo-deployer-git</code>过程中出现以下问题</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted &#123;&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;&#125; (current: &#123;&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>fsevent的作用是能够检测文件目录的修改，可以记录恶意软件的非法操作，获取恶意软件的完整路径，删除和修改日期。</p>
+<p>原因：fsevent是mac系统的可选依赖，在win或者Linux下使用了，会有警告。在windows上环境下可以忽略,也可以删除fsevent文件夹。</p>
+<hr>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.cnblogs.com/sansancn/p/11139030.html" target="_blank" rel="noopener">https://www.cnblogs.com/sansancn/p/11139030.html</a></p>
+<p><a href="https://docs.npmjs.com/common-errors" target="_blank" rel="noopener">常见错误|npm文档</a></p>
+]]></content>
+      <categories>
+        <category>疑难杂症</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>妙用Gitee(码云)提升GitHub下载速度</title>
+    <url>/2020/03/25/%E5%A6%99%E7%94%A8Gitee-%E7%A0%81%E4%BA%91-%E6%8F%90%E5%8D%87GitHub%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/suda-liu/images_store/raw/master/img/pic_007.jpg" alt=""></p>
+<p>众所周知，GitHub是一个大宝库，藏着许多开源的优秀的项目，然而一个问题是下载速度不堪入目，相信有经验的小伙伴都有那等待克隆下载的痛苦……</p>
+<p>本文就来提供一个妙招，教你再也不用苦等程序的下载了。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="码云Gitee"><a href="#码云Gitee" class="headerlink" title="码云Gitee"></a>码云Gitee</h1><p>码云(Gitee)平台相当于是国内的GitHub，通过码云的转接，即可实现GitHub上项目的下载加速。</p>
+<p>首先是要确保有一个码云的账户。</p>
+<p>点击加号，选择“从<code>GitHub/GitLab</code>导入仓库”</p>
+<p>填写想导入的仓库的地址，点击导入</p>
+<p>一般要等一会，码云就会克隆出一份同GitHub上一模一样的项目。</p>
+<p>复制码云提供的项目地址，会发现克隆速度已经很快了，很快就能下载完。</p>
+<hr>
+<h1 id="重新关联GitHub"><a href="#重新关联GitHub" class="headerlink" title="重新关联GitHub"></a>重新关联GitHub</h1><p>我们通过码云克隆到本地的项目是关联的码云Gitee的地址，所以还需要我们将本地项目重新关联到GitHub上。</p>
+<p>找到本地仓库目录下的<code>.git</code>文件夹</p>
+<p>打开<code>.git</code>文件夹下的<code>_config</code>配置文件</p>
+<p>将码云Gitee提供的项目地址换回原来的GitHub项目地址</p>
+<hr>
+]]></content>
+      <categories>
+        <category>妙用好招</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
       </tags>
   </entry>
 </search>
